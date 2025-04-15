@@ -67,13 +67,12 @@ main{
     border: 1px solid #b80301;
     border-radius: 15px;
 }
-li > ul{
+/* li > ul{
     display: none;
-}
-li:hover > ul{
+} */
+/* li:hover > ul{
     display: block;
-
-}
+} */
 
 #contenido{
     width: 79%;
@@ -84,22 +83,20 @@ li:hover > ul{
     background-color: #00c2f3a4;
 } 
 
-#izquierdo{
+#derecho{
     float: left;
     width: 98.5%;
-    height: 400px;
+    height: 100%;
     border: 1px solid transparent;
     border-radius: 12px;
     background-color: #ADADAD88;
+    input{
+        margin-top: 1%;
+        margin-right: 2%;
+    }
 }
 textarea{
     resize: none;
-    width: 98.5%;
+    width: 97%;
     height: 100px;
-}
-input:focus{
-    border: 2px solid #525252;
-}
-#izquierdo input[type="email"] {
-    text-align: center;
 }

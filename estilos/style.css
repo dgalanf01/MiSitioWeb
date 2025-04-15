@@ -62,13 +62,13 @@ main{
     border: 1px solid #b80301;
     border-radius: 15px;
 }
-li > ul{
+/* li > ul{
     display: none;
-}
-li:hover > ul{
+} */
+/* li:hover > ul{
     display: block;
 
-}
+} */
 
 #contenido{
     width: 79%;

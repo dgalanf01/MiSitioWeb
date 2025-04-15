@@ -9,27 +9,33 @@
 </head>
 <body>
     <header>
-        <div id="espacioLogo">
-            <a href="index.html"><img src="imagenes/logo.png" alt="Logo" id="logo"></a>
+        <div class="encabezado">
+            <div id="espacioLogo">
+                <a href="index.html"><img src="imagenes/logo.png" alt="Logo" id="logo"></a>
+            </div>
+            <div id="menu">
+                <a href="index.html">Home</a>
+                <a href="juegos.html">Juegos</a>
+                <a href="mundos.html">Mundos</a>
+                <a href="llaves.html">Llaves</a>
+                <a href="jefes.html">Jefes</a>
+                <a href="sugerencias.html">Sugerencias</a>
+            </div>
+            <div id="login">
+                <div class="inputs">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                    <label for="contrasena">Contrase&ntilde;a:</label>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contrase&ntilde;a">
+                </div>
+                <div class="buttons">
+                    <button id="iniciar">Iniciar sesi&oacute;n</button>
+                    <a href="index.html"><button id="registrar">Registrarse</button></a>
+                </div>
+            </div>
         </div>
-        <div id="principal">
-            <h1>Kingdom Hearts</h1>
-        </div>
-        <div id="menu">
-            <a href="index.html">Home</a>
-            <a href="index.html">Juegos</a>
-            <a href="index.html">Mundos</a>
-            <a href="index.html">Llaves</a>
-            <a href="index.html">Jefes</a>
-            <a href="sugerencias.html">Sugerencias</a>
-            <label for="idioma">Idioma : </label>
-            <select name="idioma" id="idioma">
-                <option value="es" selected>Español</option>
-                <option value="en">Ingl&eacute;s</option>
-                <option value="en">Alem&aacute;n</option>
-            </select>
-        </div>
-    </header><main>
+    </header>
+    <main>
         <div id="navegacion">
 
             <div id="buscador">
@@ -45,10 +51,8 @@
                             <li class="lista2"><a href="kh.html">KH Birth by Sleep</a></li>
                             <li class="lista2"><a href="kh.html">KH 1</a></li>
                             <li class="lista2"><a href="kh.html">KH Chains of Memories</a></li>
-                            <li class="lista2"><a href="kh.html">KH 358/2 Days</a></li>
                             <li class="lista2"><a href="kh.html">KH 2</a></li>
                             <li class="lista2"><a href="kh.html">KH Dream drop Distance</a></li>
-                            <li class="lista2"><a href="kh.html">KH 0.2 Birth by Sleep</a></li>
                             <li class="lista2"><a href="kh.html">KH 3</a></li>
                             <li class="lista2"><a href="kh.html">KH 4</a>
                                 <ul type="square">
@@ -81,13 +85,9 @@
         <div id="contenido">
             <h2>Sugerencias</h2>
 
-            <div id="izquierdo">
+            <div id="derecho">
                 <form>
-                    <label for="nombre">Cual es tu nombre?: </label>
-                    <input type="text" name="nombre" id="nombre" required><br>
-                    <label for="email">Correo: </label>
-                    <input type="email" name="email" id="email" required><br>
-                    <label for="juego">Cu&aacute;l fue el &uacute;ltimo que jugaste?:</label>
+                    <label for="juego">Cu&aacute;l fue el &uacute;ltimo que jugaste?</label>
                     <input type="text" name="juego" id="juego" required placeholder="Kingdom hearts 3"><br>
                     <label for="sugerencias">Sugerencias: </label>
                     <textarea name="sugerencias" id="sugerencias" cols="30" rows="10"></textarea><br>
