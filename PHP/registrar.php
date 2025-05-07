@@ -1,31 +1,39 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $usuario = trim($_POST["usuario"]);
-    $contrasena = trim($_POST["contrasena"]);
+include("conexion.php"); // Asegúrate de tener la conexión a la base de datos
 
-    if (empty($usuario) || empty($contrasena)) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $nombre = trim($_POST["nombre"] ?? '');
+    $password = trim($_POST["password"] ?? '');
+    $correo = trim($_POST["correo"] ?? '');
+
+    // Validar que los campos no estén vacíos
+    if (empty($nombre) || empty($password) || empty($correo)) {
         echo "Por favor, completa todos los campos.";
         exit;
     }
 
-    $archivo = "usuarios.txt";
+    // Verificar si el nombre de usuario ya existe
+    $query = "SELECT * FROM usuarios WHERE nombre = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $nombre); // Vincula el parámetro de búsqueda al nombre
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    // Verificamos si el usuario ya existe
-    if (file_exists($archivo)) {
-        $lineas = file($archivo);
-        foreach ($lineas as $linea) {
-            list($usuarioGuardado, ) = explode(":", trim($linea));
-            if ($usuario === $usuarioGuardado) {
-                echo "El usuario ya existe.";
-                exit;
-            }
-        }
+    if ($result->num_rows > 0) {
+        echo "El nombre de usuario ya existe.";
+    } else {
+        // Hashear la contraseña antes de guardarla
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Insertar el nuevo usuario en la base de datos con rol 'user' por defecto
+        $query = "INSERT INTO usuarios (nombre, password, correo, rol) VALUES (?, ?, ?, 'user')";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("sss", $nombre, $hashed_password, $correo);
+        $stmt->execute();
+
+        echo "Usuario registrado exitosamente.";
     }
-
-    // Guardamos el nuevo usuario en el archivo
-    $nuevaLinea = $usuario . ":" . password_hash($contrasena, PASSWORD_DEFAULT) . PHP_EOL;
-    file_put_contents($archivo, $nuevaLinea, FILE_APPEND);
-
-    echo "OK";
+} else {
+    echo "Método no permitido.";
 }
 ?>

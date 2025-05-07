@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header("Location: index.php");
+echo "LOGOUT_OK"; // Respuesta para JS
 exit;
