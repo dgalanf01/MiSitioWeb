@@ -121,6 +121,7 @@ header{
 
         .buttons{
             width: 100%;
+            margin-top: -5%;
             :first-child{
                 margin-left: 16%;
             }
@@ -154,21 +155,18 @@ header{
     padding: 0px 30px;
     margin-right: 40px;
     background-color: #fce271;
-    border: 2px solid #b80301;
 }
 #menu a:hover{
     padding: 0px 30px;
     margin-right: 40px;
     box-shadow: black 0px 10px 15px;
     background-color: #91e1d6;
-    border: 2px solid #b80301;
 }
 #menu a:active{
     padding: 0px 30px;
     margin-right: 40px;
     color: #b80301;
     background-color: #ddc557;
-    border: 2px solid #b80301;
 }
 
 /*footer*/

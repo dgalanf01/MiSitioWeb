@@ -54,12 +54,10 @@ main{
 }
 .lista1 li:hover{
     background-color: #91e1d666;
-    border: 1px solid #b80301;
     border-radius: 15px;
 }
 .lista2 li:hover{
     background-color: #91e1d6;
-    border: 1px solid #b80301;
     border-radius: 15px;
 }
 /* li > ul{
