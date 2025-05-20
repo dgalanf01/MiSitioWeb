@@ -4,6 +4,10 @@
     font-family: "Inknut Antiqua", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 input, select, button,textarea{
     background-color: #ADADAE77;
     border: 2px solid #525252;
@@ -22,7 +26,7 @@ label{
 }
 
 input::placeholder{
-    color: #525252;
+    color: #322222;
 }
 
 h2{
@@ -37,13 +41,10 @@ h3{
     color: #001e66;
 }
 
-a {
+a, .a {
     color: #001e66;
     text-decoration: none;
-    font-size: 18px;
-    padding: 5px 10px;
-    border: 1px solid transparent;
-    border-radius: 12px;
+    font-size: 16px;
 }
 
 header, main, footer{
@@ -57,12 +58,12 @@ div{
 }
 
 /*header*/
-header{
+header{ 
     width: 97.5%;
     height: 100%;
     border: 1px solid transparent;
     border-radius: 12px;
-    background-color: #ADADAD44;
+    background-color: #ADADAD6a;
     padding: 1%;
 }
 
@@ -81,55 +82,73 @@ header{
         align-items: center;
         width: 15%;
         height: 100%;
-        margin-left: -2%;
+        margin-left: -1%;
     }
     #logo{
         width: 100%;
+        min-width: 200px;
         height: 100%;
-    }
-
-    #menu{
-        display: flex;
-        margin-top: 4%;
-        width: 56%;
     }
 
     #login{
-        display: flex;   
-        flex-direction: column;     
-        width: 25%;
+        display:flex ; 
+        position: relative;     
+        width: 100%;
+        max-width: 600px;
+        min-width: 200px;
         height: 100%;
-        margin-left: auto;
-        margin-top: -1.5%;
-        padding: 1%;
-        justify-content: flex-end;
-
+        margin-top: -2%;
         label{
             font-size: 16px;
         }
-
-        .inputs{
-            width: 80%;
+        #loginForm{
+            width: 100%;
             height: 100%;
-            margin-top: -5%;
-            padding: 2% 5%;
-            :first-child{
-                margin: 4.5%;
+            position: absolute;
+            margin-left: 2%;
+            margin-top: -0.75%;
+            .inputs{
+                width: 100%;
+                height: 80%;
+                :first-child{
+                    margin-left: 5%;
+                }
+                .usuario{
+                   input{
+                       width: 47%;
+                   }
+               }
+                .pass{
+                    input{
+                        width: 45%;
+                    }
+                }
             }
-
-            input{
-                margin: 1%;
+            
+            .buttons{
+                display: flexbox;
+                justify-content: center;
+                width: 100%;
+                :first-child{
+                    margin-left: 10%;
+                }
+                button{
+                    position: static;
+                    width: 20%;
+                }
             }
         }
-
-        .buttons{
-            width: 100%;
-            margin-top: -5%;
-            :first-child{
-                margin-left: 16%;
-            }
-            button{
-                width: 30%;
+        #logoutForm{
+            display: flex;
+            position: absolute;
+            margin-left: 40%;
+            justify-content: end;
+            align-items: end;
+            width: 50%;
+            height: 100%;
+            margin-top: 4%;
+            label{
+                margin-right: 2%;
             }
         }
     }
@@ -137,39 +156,34 @@ header{
 
  /* Título y menú */
 #menu{
-    float: left;
-    width: 70%;
-    height: 50px;
-    margin-top: 15px;
-}
-#menu a:link{
-    padding: 0px 30px;
-    margin-right: 40px;
-    background-color: #fce271;
-    border: 2px solid black;
-}
-#menu a:visited{
-    padding: 0px 30px;
-    margin-right: 40px;
-    background-color: #fce271;
-    border: 2px solid black;
-}
-#menu a:focus{
-    padding: 0px 30px;
-    margin-right: 40px;
-    background-color: #fce271;
-}
-#menu a:hover{
-    padding: 0px 30px;
-    margin-right: 40px;
-    box-shadow: black 0px 10px 15px;
-    background-color: #91e1d6;
-}
-#menu a:active{
-    padding: 0px 30px;
-    margin-right: 40px;
-    color: #b80301;
-    background-color: #ddc557;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    max-width: 9000px;
+    min-width: 400px;
+    height: 100%;
+    padding-left: 0 auto;
+    margin-left: 5%;
+    a{
+        display: flex;
+        justify-content: flex-end;
+        min-width: 15%;
+        max-width: 100%;
+        height: 35%;
+        margin: 1%;
+        text-align: center;
+        justify-content: center;
+        background-color: #fce271;
+        border: 2px solid black;
+        border-radius: 12px;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        &:hover{
+            box-shadow: black 0px 10px 15px;
+            background-color: #91e1d6;
+        }  
+    }
 }
 
 /*footer*/

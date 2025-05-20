@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kingdom Hearts</title>
     <link rel="stylesheet" type="text/css" href="estilos/header_footer.css">
     <link rel="stylesheet" type="text/css" href="estilos/style.css">
-    <script src="JS/login.js" defer></script> <!-- Este script lo usas para manejar la sesión con JS si lo necesitas -->
+    <script src="JS/login.js" defer></script> <!-- Este script se encarga del inicio de sesión -->
+    <script src="JS/ocultar.js" defer></script> <!-- Este script contiene la función para ocultar listas del sidebar-->
 </head>
+
 <body>
     <header>
         <div class="encabezado">
             <div id="espacioLogo">
                 <a href="index.html"><img src="imagenes/logo.png" alt="Logo" id="logo"></a>
             </div>
-            
+
             <div id="menu">
                 <a href="index.html">Home</a>
                 <a href="juegos.html">Juegos</a>
@@ -27,10 +30,16 @@
                 <!-- Formulario de login -->
                 <form id="loginForm" action="PHP/login.php" method="POST">
                     <div class="inputs">
-                        <label for="usuario">Usuario:</label>
-                        <input type="text" name="usuario" id="usuario" placeholder="Usuario" required autocomplete="off">
-                        <label for="contrasena">Contrase&ntilde;a:</label>
-                        <input type="password" name="contrasena" id="contrasena" placeholder="Contrase&ntilde;a" required>
+                        <div class="usuario">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" name="usuario" id="usuario" placeholder="Usuario" required
+                            autocomplete="off">
+                        </div>
+                        <div class="pass">
+                            <label for="contrasena">Contrase&ntilde;a:</label>
+                            <input type="password" name="contrasena" id="contrasena" placeholder="Contrase&ntilde;a"
+                            required>
+                        </div>
                     </div>
                     <div class="buttons">
                         <button type="submit" id="iniciar">Iniciar sesión</button>
@@ -43,41 +52,40 @@
 
     <main>
         <div id="navegacion">
-            <div id="buscador">
-                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-                <button id="buscar">Buscar</button>
-                <hr>
-            </div>
-            
+
             <div id="listas">
                 <ul>
-                    <li class="lista1"><h3>Juegos</h3>
+                    <li class="lista1">
+                        <h3>Juegos</h3>
                         <ul>
-                            <li class="lista2"><a href="kh.html">KH BbS</a></li>
-                            <li class="lista2"><a href="kh.html">KH 1</a></li>
-                            <li class="lista2"><a href="kh.html">KH CoM</a></li>
-                            <li class="lista2"><a href="kh.html">KH 2</a></li>
-                            <li class="lista2"><a href="kh.html">KH DdD</a></li>
-                            <li class="lista2"><a href="kh.html">KH 3</a></li>
-                            <li class="lista2"><a href="kh.html">KH 4</a>
+                            <li class="lista2"><a href="juegos.html#bbs">KH BbS</a></li>
+                            <li class="lista2"><a href="juegos.html#kh1">KH 1</a></li>
+                            <li class="lista2"><a href="juegos.html#khcom">KH CoM</a></li>
+                            <li class="lista2"><a href="juegos.html#kh2">KH 2</a></li>
+                            <li class="lista2"><a href="juegos.html#khddd">KH DdD</a></li>
+                            <li class="lista2"><a href="juegos.html#kh3">KH 3</a></li>
+                            <li class="lista2"><p class="a">KH 4</p>
                                 <ul type="square">
-                                    <li class="lista2"><a href="kh.html">Informaci&oacute;n</a></li>
-                                    <li class="lista2"><a href="kh.html">Teaser</a></li>
+                                    <li class="lista3"><a href="juegos.html#kh3info">Informaci&oacute;n</a></li>
+                                    <li class="lista3"><a href="juegos.html#kh3tea">Teaser</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li class="lista1" ><h3>Mundos</h3>
+                    <li class="lista1">
+                        <h3>Mundos</h3>
                         <ul>
                             <li class="lista2"><a href="kh.html">Destiny Islands</a></li>
                         </ul>
                     </li>
-                    <li class="lista1"><h3>Llaves</h3>
+                    <li class="lista1">
+                        <h3>Llaves</h3>
                         <ul>
                             <li class="lista2"><a href="kh.html">Recuerdo lejanos</a></li>
                         </ul>
                     </li>
-                    <li class="lista1"><h3>Jefes</a></h3>
+                    <li class="lista1">
+                        <h3>Jefes</h3>
                         <ul>
                             <li class="lista2"><a href="kh.html">Vanitas</a></li>
                         </ul>
@@ -91,11 +99,53 @@
             <h2>Home</h2>
 
             <div id="izquierdo">
-                <p>Mucho texto</p>
+                <p class="label">
+                    <strong>Kingdom Hearts</strong> es una saga de videojuegos de rol de acción (RPG) desarrollados y
+                    publicados por Square Enix. Es el
+                    resultado de una colaboración entre Square y los estudios de Disney Interactive y bajo la dirección
+                    de Tetsuya Nomura.
+                </p>
+                <p class="label">
+                    Kingdom Hearts es un crossover de varios mundos de producciones propiedad de The
+                    Disney Company basado en un universo hecho específicamente para la saga. También hacen apariciones
+                    personajes de la saga Final Fantasy de Square Enix e interaccionan con el jugador y los demás
+                    personajes.
+                </p>
+                <p class="label">
+                    La saga se enfoca en el personaje principal, Sora, en su búsqueda de sus amigos y sus
+                    encuentros con personajes de producciones de The Disney Company y Final Fantasy en sus respectivos
+                    mundos.
+                </p>
+                <p class="label">
+                    Aunque la saga cuenta con lugares únicos para la franquicia Kingdom Hearts, la mayoría de mundos
+                    están basados en películas de The Disney Company. Sora debe visitar estos mundos e interaccionar con
+                    los populares personajes de las franquicias propiedad de The Disney Company, ayudarlos y protegerlos
+                    de sus enemigos.
+                </p>
+                <p class="label">
+                    A menudo, las aventuras de Sora en estos mundos siguen de cerca las historias que de las películas
+                    de The Disney Company en que se basa el lugar. En uno de los diálogos, el Pato Donald le dice a Sora
+                    que no debe interferir demasiado con los mundos, ya que tal interferencia podría causar problemas.
+                    Los Moguris, pequeñas criaturas originadas en la saga Final Fantasy, son otro elemento común en los
+                    juegos. Proporcionan el jugador tiendas para que el jugador pueda comprar, vender o sintetizar
+                    objetos que vaya necesitando a lo largo del videojuego.
+                </p>
+                <p class="label">
+                    Como elemento principal tenemos la <strong>Nave Gumi:</strong> es un elemento común en la saga, que
+                    sirve como medio de transporte para Sora y compañía a la hora de viajar hacia otros mundos. Los
+                    jugadores pueden modificar y personalizar estas naves a través del Editor Gumi.
+                </p>
+                <p class="label">
+                    Otro elemento recurrente de la saga Kingdom Hearts es el <strong>Diario de Pepito</strong> u otros similares, que
+                    registra toda la historia, lo que sucede en cada mundo y sus personajes y además ofrece consejos e
+                    información de carácter simple. El diario también registra los resultados de los mini-juegos en los
+                    que participa Sora, así como las misiones pendientes, permitiendo a los jugadores que tengan más
+                    fácil completarlos para proseguir en el videojuego.
+                </p>
             </div>
 
             <div id="derecho">
-                <p>Mucha imagen</p>
+                <p class="label">Mucha imagen</p>
             </div>
 
         </div>
@@ -110,4 +160,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -6,7 +6,8 @@
     <title>Juegos</title>
     <link rel="stylesheet" type="text/css" href="estilos/header_footer.css">
     <link rel="stylesheet" type="text/css" href="estilos/style.css">
-    <script src="JS/login.js" defer></script>
+    <script src="JS/login.js" defer></script> <!-- Este script se encarga del inicio de sesión -->
+    <script src="JS/ocultar.js" defer></script> <!-- Este script contiene la función para ocultar listas del sidebar-->
 </head>
 <body>
     <header>
@@ -27,10 +28,16 @@
                 <!-- Formulario de login -->
                 <form id="loginForm" action="PHP/login.php" method="POST">
                     <div class="inputs">
-                        <label for="usuario">Usuario:</label>
-                        <input type="text" name="usuario" id="usuario" placeholder="Usuario" required autocomplete="off">
-                        <label for="contrasena">Contrase&ntilde;a:</label>
-                        <input type="password" name="contrasena" id="contrasena" placeholder="Contrase&ntilde;a" required>
+                        <div class="usuario">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" name="usuario" id="usuario" placeholder="Usuario" required
+                            autocomplete="off">
+                        </div>
+                        <div class="pass">
+                            <label for="contrasena">Contrase&ntilde;a:</label>
+                            <input type="password" name="contrasena" id="contrasena" placeholder="Contrase&ntilde;a"
+                            required>
+                        </div>
                     </div>
                     <div class="buttons">
                         <button type="submit" id="iniciar">Iniciar sesión</button>
@@ -43,27 +50,22 @@
 
     <main>
         <div id="navegacion">
-
-            <div id="buscador">
-                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-                <button id="buscar">Buscar</button>
-                <hr>
-            </div>
             
             <div id="listas">
                 <ul>
-                    <li class="lista1"><h3>Juegos</h3>
+                    <li class="lista1">
+                        <h3>Juegos</h3>
                         <ul>
-                            <li class="lista2"><a href="kh.html">KH BbS</a></li>
-                            <li class="lista2"><a href="kh.html">KH 1</a></li>
-                            <li class="lista2"><a href="kh.html">KH CoM</a></li>
-                            <li class="lista2"><a href="kh.html">KH 2</a></li>
-                            <li class="lista2"><a href="kh.html">KH DdD</a></li>
-                            <li class="lista2"><a href="kh.html">KH 3</a></li>
-                            <li class="lista2"><a href="kh.html">KH 4</a>
+                            <li class="lista2"><a href="juegos.html#bbs">KH BbS</a></li>
+                            <li class="lista2"><a href="juegos.html#kh1">KH 1</a></li>
+                            <li class="lista2"><a href="juegos.html#khcom">KH CoM</a></li>
+                            <li class="lista2"><a href="juegos.html#kh2">KH 2</a></li>
+                            <li class="lista2"><a href="juegos.html#khddd">KH DdD</a></li>
+                            <li class="lista2"><a href="juegos.html#kh3">KH 3</a></li>
+                            <li class="lista2"><p class="a">KH 4</p>
                                 <ul type="square">
-                                    <li class="lista2"><a href="kh.html">Informaci&oacute;n</a></li>
-                                    <li class="lista2"><a href="kh.html">Teaser</a></li>
+                                    <li class="lista3"><a href="juegos.html#kh3info">Informaci&oacute;n</a></li>
+                                    <li class="lista3"><a href="juegos.html#kh3tea">Teaser</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -92,11 +94,11 @@
             <h2>Jefes</h2>
 
             <div id="izquierdo">
-                <p>Mucho texto</p>
+                <p class="label">Mucho texto</p>
             </div>
 
             <div id="derecho">
-                <p>Mucha imagen</p>
+                <p class="label">Mucha imagen</p>
             </div>
 
         </div>

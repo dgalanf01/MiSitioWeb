@@ -6,11 +6,14 @@ main{
     margin-bottom: 5px;
     border: 1px solid transparent;
     border-radius: 12px;
-    background-color: #ADADAD44;
+    background-color: #ADADAD6A;
 }
 
 /* Zona de busqueda y listas */
 #navegacion{
+    position: sticky;
+    top: 1%;
+    z-index: 1;
     width: 18%;
     height: 100%;
     border: 1px solid transparent;
@@ -18,30 +21,73 @@ main{
     background-color: #00c2f3a4;
 }
 
-#buscador{
-    width: 300px;
-}
-
 #listas{
-    width: 320px;
+    width: 100%;
     height: 100%;
     text-align: left;
     margin-top: 10px;
-    padding-left: -80px;
+    margin-left: -12%;
+    .lista1{
+        list-style-type: none;
+    }
+    .lista2, .lista3{
+        list-style-type: none;
+        margin-left: -10%;
+    }
+    
 }
-.lista1, .lista2{
-    list-style-type: none;
+
+#listas li.lista1 > ul {
+  display: none;
 }
-#listas h3::before{
-    content: ' ';
+
+#listas h3 {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#listas h3::before {
+    content: '';
     display: inline-block;
     width: 20px;
     height: 30px;
     background-image: url("../imagenes/logoLista.png");
     background-repeat: no-repeat;
     background-size: contain;
-    transform: translateY(10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s;
+    transform: translateY(10px) rotate(0deg);
 }
+
+/* Girar 180° cuando está abierto */
+#listas h3.abierto::before {
+    transform: translateY(10px) rotate(180deg);
+}
+
+.lista2 p::before {
+  content: ' ';
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  background-image: url("../imagenes/logoLista2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(11px);
+  transition: transform 0.3s ease;
+}
+
+.lista2.abierto > p::before {
+  transform: translateY(6px) rotate(180deg);
+}
+
+.lista2 > ul {
+  display: none;
+}
+
 .lista2 a::before{
     content: ' ';
     display: inline-block;
@@ -52,6 +98,7 @@ main{
     background-size: contain;
     transform: translateY(10px);
 }
+
 .lista1 li:hover{
     background-color: #91e1d666;
     border-radius: 15px;
@@ -59,6 +106,9 @@ main{
 .lista2 li:hover{
     background-color: #91e1d6;
     border-radius: 15px;
+}
+li.lista1 > ul {
+  display: none;
 }
 /* li > ul{
     display: none;
@@ -72,25 +122,26 @@ main{
     width: 79%;
     height: 100%;
     margin-left: 10px;
+    padding-left: 2%;
     border: 1px solid transparent;
     border-radius: 12px;
     background-color: #00c2f3a4;
-} 
+}
+
+.label{
+    font-size: 16px;
+    color: #fff;
+    /* text-shadow: #001e66 0px 0px 5px; */
+}
 
 #izquierdo{
     float: left;
     width: 61%;
-    height: 800px;
-    border: 1px solid transparent;
-    border-radius: 12px;
-    background-color: #ADADAD88;
+    height: 100%;
 }
 
 #derecho{
     float: right;
     width: 35%;
-    height: 800px;
-    border: 1px solid transparent;
-    border-radius: 12px;
-    background-color: #ADADAD88;
+    height: 100%;
 }
