@@ -24,29 +24,55 @@
                 <a href="mundos.html">Mundos</a>
                 <a href="llaves.html">Llaves</a>
                 <a href="jefes.html">Jefes</a>
-                <a href="sugerencias.html">Sugerencias</a>
+                <a href="sugerencias.html" id="linkSugerencias">Sugerencias</a>
             </div>
             <div id="login">
-                <!-- Formulario de login -->
-                <form id="loginForm" action="PHP/login.php" method="POST">
-                    <div class="inputs">
-                        <div class="usuario">
-                            <label for="usuario">Usuario:</label>
-                            <input type="text" name="usuario" id="usuario" placeholder="Usuario" required
-                            autocomplete="off">
-                        </div>
-                        <div class="pass">
-                            <label for="contrasena">Contrase&ntilde;a:</label>
-                            <input type="password" name="contrasena" id="contrasena" placeholder="Contrase&ntilde;a"
-                            required>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button type="submit" id="iniciar">Iniciar sesión</button>
-                        <a href="registro.html"><button type="button">Registrarse</button></a>
-                    </div>
-                </form>
+                <!-- Aquí se inyectarán los botones o el logout dinámicamente -->
             </div>
+
+            <!-- Modal Iniciar sesión -->
+            <div id="modalLogin" class="modal">
+                <div class="modal-content">
+                    <span class="close"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            width="24px" fill="#75FBFD">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></span>
+                    <form id="loginForm" action="PHP/login.php" method="POST">
+                        <h2>Iniciar sesión</h2>
+                        <label for="usuario">Usuario:</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Usuario" required
+                            autocomplete="off">
+                        <label for="contrasena">Contraseña:</label>
+                        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+                        <button type="submit">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Modal Registro -->
+            <div id="modalRegistro" class="modal">
+                <div class="modal-content">
+                    <span class="close"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            width="24px" fill="#75FBFD">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></span>
+                    <form id="registroForm" action="PHP/registro.php" method="POST">
+                        <h2>Registrarse</h2>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <label for="nuevoUsuario">Usuario:</label>
+                        <input type="text" name="nuevoUsuario" id="nuevoUsuario" placeholder="Nuevo usuario" required
+                            autocomplete="off">
+                        <label for="nuevaContrasena">Contraseña:</label>
+                        <input type="password" name="nuevaContrasena" id="nuevaContrasena" placeholder="Contraseña"
+                            required>
+                        <button type="submit">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </header>
 
@@ -64,7 +90,8 @@
                             <li class="lista2"><a href="juegos.html#kh2">KH 2</a></li>
                             <li class="lista2"><a href="juegos.html#khddd">KH DdD</a></li>
                             <li class="lista2"><a href="juegos.html#kh3">KH 3</a></li>
-                            <li class="lista2"><p class="a">KH 4</p>
+                            <li class="lista2">
+                                <p class="a">KH 4</p>
                                 <ul type="square">
                                     <li class="lista3"><a href="juegos.html#kh3info">Informaci&oacute;n</a></li>
                                     <li class="lista3"><a href="juegos.html#kh3tea">Teaser</a></li>
@@ -137,7 +164,8 @@
                     jugadores pueden modificar y personalizar estas naves a través del Editor Gumi.
                 </p>
                 <p class="label">
-                    Otro elemento recurrente de la saga Kingdom Hearts es el <strong>Diario de Pepito</strong> u otros similares, que
+                    Otro elemento recurrente de la saga Kingdom Hearts es el <strong>Diario de Pepito</strong> u otros
+                    similares, que
                     registra toda la historia, lo que sucede en cada mundo y sus personajes y además ofrece consejos e
                     información de carácter simple. El diario también registra los resultados de los mini-juegos en los
                     que participa Sora, así como las misiones pendientes, permitiendo a los jugadores que tengan más
