@@ -122,28 +122,38 @@ li.lista1 > ul {
     width: 79%;
     height: 100%;
     margin-left: 10px;
-    padding-left: 2%;
+    padding: 2%;
     border: 1px solid transparent;
     border-radius: 12px;
     background-color: #00c2f3a4;
+    justify-content: center;
 }
 
-.label{
-    font-size: 16px;
-    color: #fff;
-    /* text-shadow: #001e66 0px 0px 5px; */
-}
 
 #izquierdo{
-    float: left;
-    width: 61%;
-    height: 100%;
-}
-
-#derecho{
-    float: right;
-    width: 35%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 91%;
+  height: 100%;
+  .label{
+    display: fixed;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+  }
+  .imagen{
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    min-width: 200px;
+  }
+  .gif{
+    width: 100%;
+    max-width: 600px;
+    min-width: 200px;
+  }
 }
 
 /* Botón oculto en escritorio */
@@ -155,10 +165,10 @@ li.lista1 > ul {
   cursor: pointer;
   color: #001e66;
   margin-bottom: 10px;
-  position: fixed;      /* fijo para que esté siempre visible */
+  position: fixed;
   top: 15px;
   left: 15px;
-  z-index: 11000;       /* sobre todo */
+  z-index: 11000; 
 }
 
 /* Para pantallas pequeñas */
@@ -170,18 +180,23 @@ li.lista1 > ul {
 
   #navegacion {
     display: none;
-    position: fixed;         /* fijo para superponerse */
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 40%;              /* ancho del menú */
-    height: 100%;            /* toda la altura */
-    background-color: rgba(173, 173, 173, 0.95);  /* fondo semitransparente */
+    width: 300px;              
+    height: 100%;            
+    background-color: #949494;
     border-radius: 0 12px 12px 0;
     padding: 20px;
+    text-shadow: #91e1d6 0px 0px 5px;
     box-sizing: border-box;
     overflow-y: auto;
     z-index: 10000;          /* encima de todo excepto botón */
     box-shadow: 3px 0 10px rgba(0,0,0,0.5);
+  }
+
+  #navegacion::-webkit-scrollbar {
+    display: none;
   }
 
   #navegacion.active {
@@ -205,3 +220,6 @@ li.lista1 > ul {
   }
 }
 
+.oculto {
+    display: none !important;
+}

@@ -38,7 +38,7 @@
                 <div class="modal-content">
                     <span class="close">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
+                        width="44px" fill="#75FBFD">
                             <path
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg>
@@ -107,14 +107,16 @@
                     </li>
                     <li class="lista1" ><h3>Mundos</h3>
                         <ul>
-                            <li class="lista2"><a href="mundos.html?mundo=traverse">Traverse Town</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=traverse">Ciudad de Paso</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=maravilla">País de las maravillas</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=jungle">Selva Profunda</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=olimpo">Coliseo</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=nightmare">Ciudad de Halloween</a></li>
                             <li class="lista2"><a href="mundos.html?mundo=hollow">Hollow Bastion</a></li>
                         </ul>
                     </li>
-                    <li class="lista1"><h3>Llaves</h3>
-                        <ul>
-                            <li class="lista2"><a href="kh.html">Recuerdo lejanos</a></li>
-                        </ul>
+                    <li class="lista1">
+                        <a href="llaves.html"><h3>Llaves</h3></a>
                     </li>
                     <li class="lista1"><h3>Jefes</a></h3>
                         <ul>
@@ -132,8 +134,12 @@
             <div id="izquierdo">
                 <label for="selector-mundo">Selecciona un mundo:</label>
                 <select id="selector-mundo">
-                    <option value="traverse">Traverse Town</option>
-                    <option value="hollow">Hollow Bastion</option>
+                    <option value="traverse">Ciudad de Paso</option>
+                    <option value="maravilla">País de las maravillas</option>
+                    <option value="jungle">Selva Profunda</option>
+                    <option value="olimpo">Coliseo</option>
+                    <option value="nightmare">Ciudad de Halloween</option>
+                    <option value="hollow">Bastión Hueco</option>
                 </select>
                 <div class="mapas">
                     <img id="mapa-imagen" class="mapa" src="imagenes/mapa_traverse.jpg" alt="Mapa del mundo">
@@ -141,7 +147,12 @@
 
                 <!-- Popup -->
                 <div id="popup" class="popup">
-                    <span onclick="cerrarPopup()" class="cerrar">&times;</span>
+                    <span onclick="cerrarPopup()" class="cerrar">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#75FBFD">
+                            <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></span>
                     <img id="popup-imagen" src="" alt="Ubicación del trío">
                 </div>
             </div>

@@ -87,7 +87,8 @@ header{
     }
     #logo{
         width: 100%;
-        min-width: 200px;
+        max-width: 200px;
+        min-width: 150px;
         height: 100%;
     }
 
@@ -246,20 +247,33 @@ button, input[type="submit"], input[type="reset"]{
 /* Ocultar botón hamburguesa por defecto */
 #menu-toggle {
   display: none;
+  justify-content: end;
   font-size: 30px;
   background: none;
   border: none;
   cursor: pointer;
   color: #001e66;
-  margin-left: 10px;
-  z-index: 2000;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 11000; 
 }
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 1270px) {
+
+    .encabezado{
+        align-items: center;
+        #espacioLogo {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
   /* Mostrar botón hamburguesa */
   #menu-toggle {
-    display: inline-block;
+    display: flex;
+    top: 40px;
   }
 
   /* Estilo del panel derecho */
@@ -268,35 +282,57 @@ button, input[type="submit"], input[type="reset"]{
     position: fixed;
     top: 0;
     right: 0;
-    width: 80%;
+    width: 100%;
     max-width: 300px;
     height: 100%;
-    background-color: rgba(173, 173, 173, 0.95);
+    background-color: #494949;
+    border-radius:  12px 0 0 12px ;
     box-shadow: -4px 0 10px rgba(0,0,0,0.5);
     z-index: 1500;
-    padding: 20px;
     flex-direction: column;
     overflow-y: auto;
     transition: transform 0.3s ease;
     transform: translateX(100%); /* Fuera de pantalla */
+    button, a{
+        box-shadow: black 0px 10px 15px;
+    }
+  }
+  
+  .panel-derecha::-webkit-scrollbar {
+    display: none;
   }
 
   .panel-derecha.active {
-    display: flex;
+    display: fixed; 
     transform: translateX(0); /* Visible */
   }
 
   .panel-derecha #menu {
     order: 2;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .panel-derecha #login {
     order: 1;
+    width: 300px !important;
+    height: 20%;
+    padding: 0px !important;
+    margin-top: 20%;
   }
 
   #menu a {
-    width: 100%;
-    text-align: left;
+    width: 300px;
+    height: 10%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 
   /* Overlay al abrir menú */
@@ -308,4 +344,8 @@ button, input[type="submit"], input[type="reset"]{
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
   }
+}
+
+.oculto {
+    display: none !important;
 }

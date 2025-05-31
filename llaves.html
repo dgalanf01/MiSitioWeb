@@ -7,9 +7,11 @@
     <title>Llaves</title>
     <link rel="stylesheet" type="text/css" href="estilos/header_footer.css">
     <link rel="stylesheet" type="text/css" href="estilos/style.css">
+    <link rel="stylesheet" type="text/css" href="estilos/llaves.css">
     <script src="JS/login.js" defer></script> <!-- inicio de sesión -->
     <script src="JS/ocultar.js" defer></script> <!-- Función para ocultar listas del sidebar-->
     <script src="JS/menus.js" defer></script> <!-- menú responsive -->
+    <script src="JS/llaves.js" defer></script>
 </head>
 <body>
     <header>
@@ -105,14 +107,16 @@
                     </li>
                     <li class="lista1" ><h3>Mundos</h3>
                         <ul>
-                            <li class="lista2"><a href="mundos.html?mundo=traverse">Traverse Town</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=traverse">Ciudad de Paso</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=maravilla">País de las maravillas</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=jungle">Selva Profunda</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=olimpo">Coliseo</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=nightmare">Ciudad de Halloween</a></li>
                             <li class="lista2"><a href="mundos.html?mundo=hollow">Hollow Bastion</a></li>
                         </ul>
                     </li>
-                    <li class="lista1"><h3>Llaves</h3>
-                        <ul>
-                            <li class="lista2"><a href="kh.html">Recuerdo lejanos</a></li>
-                        </ul>
+                    <li class="lista1">
+                        <a href="llaves.html"><h3>Llaves</h3></a>
                     </li>
                     <li class="lista1"><h3>Jefes</a></h3>
                         <ul>
@@ -128,11 +132,20 @@
             <h2>Llaves</h2>
 
             <div id="izquierdo">
-                <p class="label">Mucho texto</p>
-            </div>
-
-            <div id="derecho">
-                <p class="label">Mucha imagen</p>
+                <table id="tablaArmas">
+                    <thead>
+                        <tr class="a">
+                            <th>Imagen</th>
+                            <th>Juego</th>
+                            <th>Mundo</th>
+                            <th>Nombre del Arma</th>
+                            <th>Fuerza</th>
+                            <th>Magia</th>
+                            <th>Obtención</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
 
         </div>

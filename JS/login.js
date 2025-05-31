@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (estadoSesion === "true") {
         mostrarLogout(usuarioSesion);
-        sugerenciasLink.style.display = "inline";
+        sugerenciasLink.style.display = "flex";
     } else {
         fetch("PHP/check_session.php")
             .then(res => res.json())

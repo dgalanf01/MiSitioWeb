@@ -125,7 +125,7 @@ main{
     background-color: #00c2f3a4;
 } 
 
-#derecho{
+#izquierdo{
     float: left;
     width: 98.5%;
     height: 100%;
@@ -140,4 +140,86 @@ textarea{
     resize: none;
     width: 97%;
     height: 100px;
+}
+
+/* Botón oculto en escritorio */
+#menu-sidebar {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #001e66;
+  margin-bottom: 10px;
+  position: fixed;      /* fijo para que esté siempre visible */
+  top: 15px;
+  left: 15px;
+  z-index: 11000;       /* sobre todo */
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 900px) {
+  #menu-sidebar {
+    display: flex;
+    top: 40px;
+  }
+
+  #navegacion {
+    display: none;
+    position: fixed;         /* fijo para superponerse */
+    top: 0;
+    left: 0;
+    width: 40%;              /* ancho del menú */
+    height: 100%;            /* toda la altura */
+    background-color: rgba(173, 173, 173, 0.95);  /* fondo semitransparente */
+    border-radius: 0 12px 12px 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 10000;          /* encima de todo excepto botón */
+    box-shadow: 3px 0 10px rgba(0,0,0,0.5);
+  }
+
+  #navegacion::-webkit-scrollbar {
+    width: 8px; 
+  }
+
+  #navegacion::-webkit-scrollbar-track {
+    background: #494949; 
+    border-radius: 10px;
+  }
+
+  #navegacion::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px;
+    border: 2px solid #494949; 
+  }
+
+  #navegacion::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  }
+  
+  #navegacion.active {
+    display: block;
+  }
+
+  /* Opcional: que las listas se apilen y se ajusten */
+  #navegacion ul:first-child {
+    padding-top: 10%;
+    padding-left: 15%;
+  }
+
+
+  /* Overlay oscuro para el resto de la página */
+  body.menu-abierto::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9000; /* justo debajo del menú */
+  }
+}
+
+.oculto {
+    display: none !important;
 }

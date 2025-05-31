@@ -32,15 +32,15 @@
                     <!-- Aquí se inyectarán los botones o el logout dinámicamente -->
                 </div>
             </div>
-            
+
             <!-- Modal Iniciar sesión -->
             <div id="modalLogin" class="modal">
                 <div class="modal-content">
                     <span class="close">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#75FBFD">
                             <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg>
                     </span>
                     <form id="loginForm" action="PHP/login.php" method="POST">
@@ -54,34 +54,34 @@
                     </form>
                 </div>
             </div>
-                
+
             <!-- Modal Registro -->
             <div id="modalRegistro" class="modal">
                 <div class="modal-content">
                     <span class="close"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
-                        <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></span>
+                            width="24px" fill="#75FBFD">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></span>
                     <form id="registroForm" action="PHP/registro.php" method="POST">
                         <h2>Registrarse</h2>
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email" placeholder="Email" required>
                         <label for="nuevoUsuario">Usuario:</label>
                         <input type="text" name="nuevoUsuario" id="nuevoUsuario" placeholder="Nuevo usuario" required
-                        autocomplete="off">
+                            autocomplete="off">
                         <label for="nuevaContrasena">Contraseña:</label>
                         <input type="password" name="nuevaContrasena" id="nuevaContrasena" placeholder="Contraseña"
-                        required>
+                            required>
                         <button type="submit">Registrarse</button>
                     </form>
                 </div>
             </div>
-                
+
+            <button id="menu-toggle" aria-label="Abrir menú">☰</button>
         </div>
-        <button id="menu-toggle" aria-label="Abrir menú">☰</button>
     </header>
-        
+
     <main>
         <button id="menu-sidebar" aria-label="Abrir menú">☰</button>
         <div id="navegacion">
@@ -109,15 +109,16 @@
                     <li class="lista1">
                         <h3>Mundos</h3>
                         <ul>
-                            <li class="lista2"><a href="mundos.html?mundo=traverse">Traverse Town</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=traverse">Ciudad de Paso</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=maravilla">País de las maravillas</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=jungle">Selva Profunda</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=olimpo">Coliseo</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=nightmare">Ciudad de Halloween</a></li>
                             <li class="lista2"><a href="mundos.html?mundo=hollow">Hollow Bastion</a></li>
                         </ul>
                     </li>
                     <li class="lista1">
-                        <h3>Llaves</h3>
-                        <ul>
-                            <li class="lista2"><a href="kh.html">Recuerdo lejanos</a></li>
-                        </ul>
+                        <a href="llaves.html"><h3>Llaves</h3></a>
                     </li>
                     <li class="lista1">
                         <h3>Jefes</h3>
@@ -135,53 +136,37 @@
 
             <div id="izquierdo">
                 <p class="label">
-                    <strong>Kingdom Hearts</strong> es una saga de videojuegos de rol de acción (RPG) desarrollados y
-                    publicados por Square Enix. Es el
-                    resultado de una colaboración entre Square y los estudios de Disney Interactive y bajo la dirección
-                    de Tetsuya Nomura.
-                </p>
+                <strong>Kingdom Hearts</strong> es una épica saga de videojuegos de rol y acción creada por Square Enix
+                en colaboración con Disney. Desde su debut en 2002, esta serie ha cautivado a jugadores de
+                todas las edades al fusionar el mágico universo de Disney con los personajes y la profundidad
+                narrativa de <strong>Final Fantasy</strong>.
+                La historia sigue a Sora, un joven portador de la Llave Espada, quien, acompañado por sus inseparables 
+                amigos Donald y Goofy, 
+                recorre diversos mundos inspirados en películas y personajes de Disney. <br>
+                <strong>Cronología:</strong></p>
+                <img src="imagenes/cronologia.jpg" alt="Cronología Kingdom Hearts" class="imagen">
                 <p class="label">
-                    Kingdom Hearts es un crossover de varios mundos de producciones propiedad de The
-                    Disney Company basado en un universo hecho específicamente para la saga. También hacen apariciones
-                    personajes de la saga Final Fantasy de Square Enix e interaccionan con el jugador y los demás
-                    personajes.
+                    Su misión es proteger estos mundos de la oscuridad, enfrentándose a los temibles Sincorazón, guiados por la oscuridad
+                    de los corazones, y a los Incorpóreos, siendo estos dirigidos por <strong>La Organización XIII</strong>; mientras busca 
+                    reencontrarse con sus amigos <strong>Riku y Kairi</strong>.
                 </p>
+                <img src="imagenes/soraFriends.jpg" alt="Sora y portadores" class="imagen">
                 <p class="label">
-                    La saga se enfoca en el personaje principal, Sora, en su búsqueda de sus amigos y sus
-                    encuentros con personajes de producciones de The Disney Company y Final Fantasy en sus respectivos
-                    mundos.
+                A lo largo de la saga, Kingdom Hearts ha explorado temas universales como la amistad, el sacrificio, el poder del corazón y la 
+                lucha entre la luz y la oscuridad, con tramas llenas de giros, misterios y conexiones entre diferentes líneas temporales.
                 </p>
+                <img src="imagenes/sacrificio.gif" alt="Sacrificio de Sora" class="gif">
                 <p class="label">
-                    Aunque la saga cuenta con lugares únicos para la franquicia Kingdom Hearts, la mayoría de mundos
-                    están basados en películas de The Disney Company. Sora debe visitar estos mundos e interaccionar con
-                    los populares personajes de las franquicias propiedad de The Disney Company, ayudarlos y protegerlos
-                    de sus enemigos.
+                Con una jugabilidad dinámica, que combina acción en tiempo real con elementos de rol, y mundos emblemáticos que van desde 
+                El Rey León hasta Piratas del Caribe, la saga ha sabido expandirse a lo largo de múltiples plataformas y títulos,
+                incluyendo juegos principales y spin-offs que enriquecen su vasto universo.
                 </p>
+                <img src="imagenes/mapamundi.jpg" alt="Mapas de mundos Disney" class="imagen">
                 <p class="label">
-                    A menudo, las aventuras de Sora en estos mundos siguen de cerca las historias que de las películas
-                    de The Disney Company en que se basa el lugar. En uno de los diálogos, el Pato Donald le dice a Sora
-                    que no debe interferir demasiado con los mundos, ya que tal interferencia podría causar problemas.
-                    Los Moguris, pequeñas criaturas originadas en la saga Final Fantasy, son otro elemento común en los
-                    juegos. Proporcionan el jugador tiendas para que el jugador pueda comprar, vender o sintetizar
-                    objetos que vaya necesitando a lo largo del videojuego.
+                Con más de dos décadas de historia, Kingdom Hearts sigue siendo una de las franquicias más queridas
+                y reconocibles del mundo de los videojuegos, ofreciendo aventuras inolvidables y un viaje cargado de
+                emoción para jugadores veteranos y nuevos fans por igual.
                 </p>
-                <p class="label">
-                    Como elemento principal tenemos la <strong>Nave Gumi:</strong> es un elemento común en la saga, que
-                    sirve como medio de transporte para Sora y compañía a la hora de viajar hacia otros mundos. Los
-                    jugadores pueden modificar y personalizar estas naves a través del Editor Gumi.
-                </p>
-                <p class="label">
-                    Otro elemento recurrente de la saga Kingdom Hearts es el <strong>Diario de Pepito</strong> u otros
-                    similares, que
-                    registra toda la historia, lo que sucede en cada mundo y sus personajes y además ofrece consejos e
-                    información de carácter simple. El diario también registra los resultados de los mini-juegos en los
-                    que participa Sora, así como las misiones pendientes, permitiendo a los jugadores que tengan más
-                    fácil completarlos para proseguir en el videojuego.
-                </p>
-            </div>
-
-            <div id="derecho">
-                <p class="label">Mucha imagen</p>
             </div>
 
         </div>

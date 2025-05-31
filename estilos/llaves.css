@@ -1,0 +1,83 @@
+#tablaArmas {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: #99999944;
+  border-radius: 12px;
+  td{
+  color: #ddd;
+  font-size: 16px;
+  }
+}
+
+#tablaArmas th, #tablaArmas td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+#tablaArmas th {
+  background-color: #999999;
+  position: sticky;
+  top: 0;
+}
+
+#tablaArmas img {
+  max-width: 60px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  
+  #tablaArmas {
+    min-width: 200px;
+  }
+  
+}
+@media (max-width: 768px) {
+  #tablaArmas {
+    width: 100%;
+  }
+  
+  #tablaArmas thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  #tablaArmas td {
+    display: block;
+    border: none;
+    padding-left: 40%;
+    position: relative;
+    min-height: 40px;
+  }
+  
+  #tablaArmas td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    font-weight: bold;
+    width: 30%;
+  }
+  
+  /* Ocultar columnas*/
+  #tablaArmas td:nth-child(6) {
+    display: none;
+  }
+  
+  /* Ajuste para la imagen */
+  #tablaArmas td:first-child {
+    padding-left: 12px;
+    text-align: center;
+  }
+  
+  #tablaArmas td:first-child:before {
+    display: none;
+  }
+}

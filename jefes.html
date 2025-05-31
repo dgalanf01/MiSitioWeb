@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <script src="JS/ocultar.js" defer></script> <!-- Función para ocultar listas del sidebar-->
     <script src="JS/menus.js" defer></script> <!-- menú responsive -->
 </head>
+
 <body>
     <header>
         <div class="encabezado">
@@ -30,15 +32,15 @@
                     <!-- Aquí se inyectarán los botones o el logout dinámicamente -->
                 </div>
             </div>
-            
+
             <!-- Modal Iniciar sesión -->
             <div id="modalLogin" class="modal">
                 <div class="modal-content">
                     <span class="close">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#75FBFD">
                             <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg>
                     </span>
                     <form id="loginForm" action="PHP/login.php" method="POST">
@@ -52,30 +54,30 @@
                     </form>
                 </div>
             </div>
-                
+
             <!-- Modal Registro -->
             <div id="modalRegistro" class="modal">
                 <div class="modal-content">
                     <span class="close"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
-                        <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></span>
+                            width="24px" fill="#75FBFD">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></span>
                     <form id="registroForm" action="PHP/registro.php" method="POST">
                         <h2>Registrarse</h2>
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email" placeholder="Email" required>
                         <label for="nuevoUsuario">Usuario:</label>
                         <input type="text" name="nuevoUsuario" id="nuevoUsuario" placeholder="Nuevo usuario" required
-                        autocomplete="off">
+                            autocomplete="off">
                         <label for="nuevaContrasena">Contraseña:</label>
                         <input type="password" name="nuevaContrasena" id="nuevaContrasena" placeholder="Contraseña"
-                        required>
+                            required>
                         <button type="submit">Registrarse</button>
                     </form>
                 </div>
             </div>
-                
+
         </div>
         <button id="menu-toggle" aria-label="Abrir menú">☰</button>
     </header>
@@ -83,7 +85,7 @@
     <main>
         <button id="menu-sidebar" aria-label="Abrir menú">☰</button>
         <div id="navegacion">
-            
+
             <div id="listas">
                 <ul>
                     <li class="lista1">
@@ -95,7 +97,8 @@
                             <li class="lista2"><a href="juegos.html#kh2">KH 2</a></li>
                             <li class="lista2"><a href="juegos.html#khddd">KH DdD</a></li>
                             <li class="lista2"><a href="juegos.html#kh3">KH 3</a></li>
-                            <li class="lista2"><p class="a">KH 4</p>
+                            <li class="lista2">
+                                <p class="a">KH 4</p>
                                 <ul type="square">
                                     <li class="lista3"><a href="juegos.html#kh3info">Informaci&oacute;n</a></li>
                                     <li class="lista3"><a href="juegos.html#kh3tea">Teaser</a></li>
@@ -103,18 +106,24 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="lista1" ><h3>Mundos</h3>
+                    <li class="lista1">
+                        <h3>Mundos</h3>
                         <ul>
-                            <li class="lista2"><a href="mundos.html?mundo=traverse">Traverse Town</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=traverse">Ciudad de Paso</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=maravilla">País de las maravillas</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=jungle">Selva Profunda</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=olimpo">Coliseo</a></li>
+                            <li class="lista2"><a href="mundos.html?mundo=nightmare">Ciudad de Halloween</a></li>
                             <li class="lista2"><a href="mundos.html?mundo=hollow">Hollow Bastion</a></li>
                         </ul>
                     </li>
-                    <li class="lista1"><h3>Llaves</h3>
-                        <ul>
-                            <li class="lista2"><a href="kh.html">Recuerdo lejanos</a></li>
-                        </ul>
+                    <li class="lista1">
+                        <a href="llaves.html">
+                            <h3>Llaves</h3>
+                        </a>
                     </li>
-                    <li class="lista1"><h3>Jefes</a></h3>
+                    <li class="lista1">
+                        <h3>Jefes</a></h3>
                         <ul>
                             <li class="lista2"><a href="kh.html">Vanitas</a></li>
                         </ul>
@@ -128,11 +137,151 @@
             <h2>Jefes</h2>
 
             <div id="izquierdo">
-                <p class="label">Mucho texto</p>
-            </div>
+                <p class="label">
+                    En esta sección encontrarás información sobre los enemigos y los jefes de Kingdom Hearts. Cada jefe
+                    tiene sus propias mecánicas y estrategias, así que asegúrate de prepararte adecuadamente antes de
+                    enfrentarte a ellos.
+                    El primer enemigo que encontrarás en esta saga son los <strong>Sin Corazones</strong>, que son
+                    criaturas oscuras que buscan consumir corazones, guiados por los villanos de los mundos Disney.
+                </p>
+                <p class="label">
+                    Según vas avanzando en la saga te enfrentarás a <strong>Los Incorporeos</strong>, cascarones
+                    creados al sucumbir a la oscuridad de los sin corazones, los incorporeos más poderosos
+                    pueden mantener su cuerpo intacto y estos reinan sobre el resto de incorporeos.
+                </p>
+                <p class="label">
+                    A medida que avanzas en la historia, te encontrarás con jefes más poderosos y desafiantes.
+                    Dando pie a la <strong>Organización XIII</strong>, un grupo de incorporeos que buscan recuperar sus
+                    corazones y convertirse en humanos de nuevo. Cada miembro de la organización tiene habilidades
+                    únicas y una historia detrás de su creación.
+                </p>
+                <p class="label">
+                    Después de estos se encuentran <strong>Los Nescientes</strong>, que son una versión más poderosa de
+                    los sin corazones, creados por la oscuridad de los corazones de los mundos. Los jefes nescientes son
+                    algunos de los enemigos más difíciles del juego, y requieren una estrategia cuidadosa para
+                    derrotarlos.
+                </p>
+                <p class="label">
+                    Finalmente, te enfrentarás a los <strong>Jefes Finales</strong>, que son los enemigos más poderosos
+                    del juego. Estos jefes suelen tener múltiples fases y requieren una gran habilidad y estrategia para
+                    derrotarlos. Cada jefe final tiene su propia historia y motivación, lo que los convierte en algunos
+                    de los enemigos más memorables de la saga.
+                </p>
+                <h3>Armadura de Eraqus</h3>
+                <p class="label">
+                    Es un personaje exclusivo de Kingdom Hearts Birth by Sleep Final Mix, y un jefe opcional dentro del
+                    juego. Es uno de los 4 jefes más difíciles del juego, junto con Desconocido, Reminiscencia de
+                    Vanitas y Noheart. Se trata de nada mas y nada menos de la armadura de combate del Maestro Eraqus,
+                    movida por la voluntad y sentimiento de este.
+                </p>
+                <h3>Kurt Zisa</h3>
+                <p class="label">
+                    Es un jefe opcional de Agrabah. Es accesible después de derrotar a Bégimo. Después de Sephiroth,
+                    ostenta el rango de enemigo más poderoso. Es un Sincorazón Emblemático, ya que en su cinturón se ve
+                    el emblema característico de estos.
+                    Cómo llegar hasta él: Transpórtate de la Nave Gumi a la casa de Aladdín, verás que la Alfombra
+                    Mágica está saltando histérica, habla con ella y acepta montarte en ella, te llevará automáticamente
+                    a Kurt Zisa.
+                </p>
+                <h3>Consciencia Latente</h3>
+                <p class="label">
+                    Es una manifestación de la voluntad y los sentimientos del portador de la Llave Espada, Terra, que
+                    residen dentro de su armadura abandonada después de que su cuerpo fuera robado por el Maestro
+                    Xehanort. Es un personaje jugable brevemente al final de la historia de Terra en Kingdom Hearts
+                    Birth by Sleep y el jefe secreto más peligroso en Kingdom Hearts II Final Mix.
+                    Su nombre, Consciencia Latente, se basa en el fuerte sentimiento de Terra, en no dejar que la
+                    oscuridad y Xehanort dominen su cuerpo y en el nombre del campo de fuerza que crea al luchar contra
+                    él.
+                </p>
+                <h3>Monstruo</h3>
+                <p class="label">
+                    Es un jefe opcional de Kingdom Hearts Birth by Sleep Final Mix. Se encuentra realizando la misión
+                    Engendro Marino en el Coso Virtual. Es el primer mundo que actúa como jefe en dos juegos, siendo el
+                    primero Kingdom Hearts: Chain of Memories, en el que debes eliminar a varios sincorazón que él mismo
+                    genera.
+                </p>
+                <h3>Desconocido</h3>
+                <p class="label">
+                    Es uno de los jefes más difíciles del juego Kingdom Hearts Birth by Sleep a causa de su rapidez y
+                    fuerza, además de sus habilidades, pues no solo es hábil físicamente sino que dispone de habilidades
+                    mágicas de los tres protagonistas y, en unos pocos golpes acabará contigo o te matará directamente,
+                    sobretodo si no cuentas con un nivel superior a 60 y no tienes las habilidades Último estertor, Hoja
+                    sana y Una vez más. Aun así, la batalla sera difícil incluso a nivel 99.
+                </p>
+                <h3>Noheart</h3>
+                <p class="label">
+                    Es un personaje exclusivo de Kingdom Hearts Birth by Sleep Final Mix, y un jefe opcional, es uno de
+                    los jefes más difíciles del juego, su nombre es un anagrama de Xehanort sin la X, luce una armadura
+                    de estilo parecido a la que utiliza Xemnas en Kingdom Hearts II, y porta la Llave Espada del Maestro
+                    Xehanort por lo que se puede deducir que podría ser la armadura de combate de dicho maestro
+                    (confirmado en Kingdom Hearts Union χ). Se recomienda estar al Nivel 99 (para destruir el sello).
+                </p>
+                <h3>Engendro Oscuro</h3>
+                <p class="label">
+                    Conocido popularmente como "Ojos Rojos", es un tipo de criatura que solo puede encontrarse como jefe
+                    final del capítulo secreto de Kingdom Hearts Birth by Sleep Final Mix y, por tanto, solo puede
+                    hacerse frente con Aqua. Parece ser un tipo de Sincorazón excepcionalmente fuerte, y quizá sea un
+                    tipo de criatura de poder superior a estos, ya que solo aparece en el lugar más recóndito del Reino
+                    de la Oscuridad.
+                </p>
+                <h3>Espectro</h3>
+                <p class="label">
+                    Es un jefe secreto de Kingdom Hearts que se encuentra en el País de Nunca Jamás. Para acceder a su
+                    combate, el jugador debe entrar en el Camarote del barco, donde Campanilla pedirá a Peter Pan volar
+                    hasta la Torre del Reloj. Cuando el jugador llegue hasta la torre, el Espectro hará su aparición
+                    volando velozmente.
+                    Es importante señalar que, para que Campanilla conduzca a Sora hasta la Torre del Reloj, Peter Pan
+                    debe estar en el grupo.
+                </p>
+                <h3>Polvoroso</h3>
+                <p class="label">
+                    Es un Sincorazón Emblemático volador, extremadamente fuerte que solo se encuentra en Kingdom Hearts
+                    358/2 Days. Es el enemigo (sincorazón o no) más poderoso del juego, además de ser el único jefe
+                    secreto de éste.
 
-            <div id="derecho">
-                <p class="label">Mucha imagen</p>
+                    El Polvoroso consiste en una versión evolucionada y muy poderosa del Wyvern.
+                </p>
+                <h3>La Proyección de Aqua</h3>
+                <p class="label">
+                    Es un jefe recurrente que debuta en Kingdom Hearts 0.2 Birth by Sleep -A Fragmentary Passage-. Todos sus combates se efectúan en el Mundo Interior.
+                </p>
+                <h3>Sefirot</h3>
+                <p class="label">
+                    Es un enemigo jefe que proviene de Final Fantasy VII. Tanto en Kingdom Hearts como en Kingdom Hearts II, es con diferencia el enemigo más poderoso que hay. Le encontrarás en el Coliseo del Olimpo tras superar la Copa Hades, bajo el nombre de Combate de Platino. 
+                </p>
+                <h3>Reminiscencia de Vanitas</h3>
+                <p class="label">
+                    Es, junto con Desconocido, uno de los jefes secretos de Kingdom Hearts Birth by Sleep.
+Para poder luchar contra la reminiscencia, tendrás que haberte pasado el Episodio Final del juego, es decir, tendrás que pasarte una vez el juego con todos los personajes (consiguiendo TODOS los informes de Xehanort entre los tres), y guardar dichas partidas al final de cada uno, una vez hecho la maquina te pedirá si quieres guardar un dato de creación para jugar el episodio final. Tras haberlo jugado y guardado, vuelve a cargar cualquier partida que tengas y podrás volar hacia la Necrópolis de Llaves Espada y aparecer en un área nueva, Páramo, donde luchaste contra Vanitas por primera vez con Ventus.
+                </p>
+                <h3>Roxas Digital</h3>
+                <p class="label">
+                     aparece por primera vez en Kingdom Hearts coded, y por segunda vez en Kingdom Hearts Re:coded.
+                </p>
+                <h3>Hoja Inquebrantable</h3>
+                <p class="label">
+                    Es un Sincorazón Emblemático muy poderoso que solo aparece en Kingdom Hearts 358/2 Days como subjefe. Es la versión más poderosa de la especie Acuchillador, así como uno de los más fuertes del juego, pudiendo quitar mucha vitalidad de un golpe.
+                </p>
+                <h3>Titán de Hielo</h3>
+                <p class="label">
+                    Es uno de los jefes opcionales de Kingdom Hearts (versión occidental) y Kingdom Hearts Final Mix. Aparece en el Coliseo del Olimpo, en el Combate de Oro. Puede llegar a ser muy peligroso, pues con su gran tamaño y con su uso del elemento Hielo puede hacer verte en riesgo. Este personaje apareció por primera vez en el clásico de Disney, "Hércules". Su nombre oficial es Hydros (que quiere decir "Agua").
+                </p>
+                <h3>Infierno Oscuro</h3>
+                <p class="label">
+                    Es un Sincorazón Purasangre que aparece en Kingdom Hearts III. Estos viles enemigos armados con una espada en cada mano te harán picadillo si les dejas. Si intentas mantener las distancias, se abalanzarán sobre ti o te dispararán bolas de fuego.
+                </p>
+                <h3>Xemnas, "El Gran Mentor"</h3>
+                <p class="label">
+                    Es el incorpóreo de Xehanort nacido a partir de Terra-Xehanort, el número I dentro de la Organización XIII y gobernante de El Mundo Inexistente. Es uno de los antagonista principales junto a DIZ en Kingdom Hearts 358/2 Days. el antagonista principal en Kingdom Hearts II y el junto con el Joven Xehanort son los antagonistas secundarios de Kingdom Hearts 3D: Dream Drop Distance.
+                </p>
+                <h3>Julius</h3>
+                <p class="label">
+                    Es un jefe secreto que aparece en Kingdom Hearts 3D: Dream Drop Distance. Aparece tanto para Sora como para Riku en Ciudad de Paso. En el combate contra él, Sora y Riku no contarán con el apoyo de los Lucientes. Posee el máximo nivel de VT (12 barras de vitalidad). La escena nos muestra a Sora y Riku paseando por Ciudad de paso cuando una alcantarilla se abre lentamente. Cuando nuestros héroes se giran se topan de lleno contra Julius, debiendo combatir con él.
+                </p>
+                <h3>Yozora</h3>
+                <p class="label">
+                    Es un personaje principal en el juego ficticio Verum Rex, que se destaca en Caja de Juguetes de Kingdom Hearts III y en el final secreto del mismo juego, observando a Riku. En el videojuego se establece que Yozora es un guerrero que tiene que salvar a una chica pelirroja muy importante para él. Cuando Sora, Donald y Goofy llegan al lugar en forma de juguetes, Sora fue confundido como "Yozora" por Rex como un juguete de Yozora.
+                </p>
             </div>
 
         </div>
@@ -147,4 +296,5 @@
         </div>
     </footer>
 </body>
+
 </html>

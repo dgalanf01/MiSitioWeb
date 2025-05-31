@@ -6,33 +6,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const isActive = panelDerecha.classList.contains('active');
     panelDerecha.classList.toggle('active', !isActive);
     document.body.classList.toggle('menu-open', !isActive);
+
+    // Ocultar botón cuando el menú está activo
+    toggleBtn.classList.toggle('oculto', !isActive);
   });
 
-  // Opcional: cerrar al hacer clic fuera
   document.addEventListener('click', (e) => {
     if (panelDerecha.classList.contains('active') && !panelDerecha.contains(e.target) && e.target !== toggleBtn) {
       panelDerecha.classList.remove('active');
       document.body.classList.remove('menu-open');
+
+      // Mostrar botón de nuevo
+      toggleBtn.classList.remove('oculto');
     }
   });
 });
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('menu-sidebar');
+  const sidebarBtn = document.getElementById('menu-sidebar');
   const nav = document.getElementById('navegacion');
   const body = document.body;
 
-  btn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    nav.classList.toggle('menu-abierto');
+  sidebarBtn.addEventListener('click', () => {
+    const isActive = nav.classList.contains('active');
+    nav.classList.toggle('active', !isActive);
+    body.classList.toggle('menu-abierto', !isActive);
+
+    // Ocultar botón cuando el menú está activo
+    sidebarBtn.classList.toggle('oculto', !isActive);
   });
 
   body.addEventListener('click', (e) => {
-    if (body.classList.contains('menu-abierto') && !nav.contains(e.target) && e.target !== btn) {
+    if (nav.classList.contains('active') && !nav.contains(e.target) && e.target !== sidebarBtn) {
       nav.classList.remove('active');
-      nav.classList.remove('menu-abierto');
+      body.classList.remove('menu-abierto');
+
+      // Mostrar botón de nuevo
+      sidebarBtn.classList.remove('oculto');
     }
   });
 });
-
