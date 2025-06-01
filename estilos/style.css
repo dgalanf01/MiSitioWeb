@@ -218,8 +218,82 @@ li.lista1 > ul {
     background-color: rgba(0,0,0,0.5);
     z-index: 9000; /* justo debajo del menú */
   }
+  .jefes, .personajes{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .oculto {
     display: none !important;
+}
+
+.jefes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  .label{
+    width: 60%;
+  }
+  .imagen{
+    width: 30%;
+    max-width: 800px;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 100%;
+      height: 100%;
+      max-width: 300px;
+      min-width: none;
+      max-height: 300px;
+      &:hover{
+        transform: scale(1.15);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  min-width: 100px;
+  max-height: 500px;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  background-color: #00c2f3a4;
+}
+.kh4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  .personajes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+  }
+}
+.teaser{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  iframe{
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    min-width: 200px;
+    max-height: 500px;
+    min-height: 300px;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    background-color: #00c2f3a4;
+  }
 }

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagenes/favicon.png" type="image/png" />
-    <title>Llaves</title>
+    <title>Kingdom Hearts</title>
     <link rel="stylesheet" type="text/css" href="estilos/header_footer.css">
     <link rel="stylesheet" type="text/css" href="estilos/style.css">
-    <link rel="stylesheet" type="text/css" href="estilos/llaves.css">
     <script src="JS/login.js" defer></script> <!-- inicio de sesión -->
     <script src="JS/ocultar.js" defer></script> <!-- Función para ocultar listas del sidebar-->
     <script src="JS/menus.js" defer></script> <!-- menú responsive -->
-    <script src="JS/llaves.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="encabezado">
@@ -32,15 +32,15 @@
                     <!-- Aquí se inyectarán los botones o el logout dinámicamente -->
                 </div>
             </div>
-            
+
             <!-- Modal Iniciar sesión -->
             <div id="modalLogin" class="modal">
                 <div class="modal-content">
                     <span class="close">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#75FBFD">
                             <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg>
                     </span>
                     <form id="loginForm" action="PHP/login.php" method="POST">
@@ -54,32 +54,32 @@
                     </form>
                 </div>
             </div>
-                
+
             <!-- Modal Registro -->
             <div id="modalRegistro" class="modal">
                 <div class="modal-content">
                     <span class="close"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
-                        <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></span>
+                            width="24px" fill="#75FBFD">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></span>
                     <form id="registroForm" action="PHP/registro.php" method="POST">
                         <h2>Registrarse</h2>
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email" placeholder="Email" required>
                         <label for="nuevoUsuario">Usuario:</label>
                         <input type="text" name="nuevoUsuario" id="nuevoUsuario" placeholder="Nuevo usuario" required
-                        autocomplete="off">
+                            autocomplete="off">
                         <label for="nuevaContrasena">Contraseña:</label>
                         <input type="password" name="nuevaContrasena" id="nuevaContrasena" placeholder="Contraseña"
-                        required>
+                            required>
                         <button type="submit">Registrarse</button>
                     </form>
                 </div>
             </div>
-                
+
+            <button id="menu-toggle" aria-label="Abrir menú">☰</button>
         </div>
-        <button id="menu-toggle" aria-label="Abrir menú">☰</button>
     </header>
 
     <main>
@@ -151,23 +151,104 @@
         </div>
 
         <div id="contenido">
-            <h2>Llaves</h2>
+            <h2>Kingdom Hearts VI</h2>
 
             <div id="izquierdo">
-                <table id="tablaArmas">
-                    <thead>
-                        <tr class="a">
-                            <th>Imagen</th>
-                            <th>Juego</th>
-                            <th>Mundo</th>
-                            <th>Nombre del Arma</th>
-                            <th>Fuerza</th>
-                            <th>Magia</th>
-                            <th>Obtención</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <div class="label jefes kh4">
+                    <h3>Información</h3>
+                    <div class="info" id="info">
+                        <strong>Cuando se anunció?</strong>
+                        <p>
+                            Fue anunciado oficialmente en abril de 2022 durante el 20.º aniversario de la franquicia. El
+                            desarrollo comenzó en enero de 2020 y está siendo llevado a cabo por Square Enix Business
+                            Division 3, el mismo equipo que trabajó en Kingdom Hearts III . El juego utilizará el motor
+                            gráfico Unreal Engine 5, lo que promete una mejora significativa en los gráficos y la
+                            iluminación en comparación con entregas anteriores .
+                        </p>
+                    </div>
+                    <div class="escenario">
+                        <strong>Escenario:</strong>
+                        <p>
+                            La historia se desarrolla en Quadratum, un mundo realista inspirado en Tokio, con barrios como
+                            Shibuya y Minami-Aoyama. Sora se encuentra atrapado en este mundo tras los eventos de Kingdom
+                            Hearts III y Kingdom Hearts: Melody of Memory. Mientras tanto, Donald y Goofy buscan una forma
+                            de rescatarlo .
+                        </p>
+                    </div>
+                    <div class="jugabilidad">
+                        <strong>Jugabilidad:</strong>
+                        <p>
+                            Sistema de combate: Se han confirmado mejoras en el sistema de combate, incluyendo la vuelta de
+                            los reaction commands (comandos de reacción) que debutaron en Kingdom Hearts II. Además, se
+                            introducirá una nueva mecánica llamada "Scrap and Build", que permitirá a Sora destruir y
+                            reconstruir objetos durante el combate .
+                            
+                        </p>
+                        <p>
+                            Exploración: La exploración será más libre y dinámica, con elementos de parkour y la capacidad
+                            de usar la Keyblade como gancho para atravesar grandes distancias.
+                        </p>
+                        <p>
+                            Mundos: Se espera que el juego incluya mundos basados en propiedades de Disney y Pixar. Un rumor
+                            sugiere la inclusión de un mundo inspirado en Vaiana, aunque aún no ha sido confirmado
+                            oficialmente .
+                        </p>
+                    </div>
+                    <strong>Personajes:</strong>
+                    <div class="personajes">
+                        <div class="sora">
+                            <strong><i>Sora</i></strong>
+                            <div class="label">
+                                <p>
+                                    El protagonista principal, quien regresa con un diseño más realista acorde al mundo de Quadratum.
+                                </p>
+                            </div>
+                            <div class="imagen">
+                                <img src="imagenes/sorakh4.png" alt="sora kh4">
+                            </div>
+                        </div>
+                        <div class="donalgoofy">
+                            <strong><i>Donald y Goofy</i></strong>
+                            <div class="label">
+                                <p>
+                                    Sus compañeros de siempre, que acompañarán a Sora en su aventura.
+                                </p>
+                            </div>
+                            <div class="imagen">
+                                <img src="imagenes/dandgkh4.png" alt="donald y goofy kh4">
+                            </div>
+                        </div>
+                        <div class="strelitzia">
+                            <strong><i>Strelitzia</i></strong>
+                            <div class="label">
+                                <p>
+                                    Una portadora de la Keyblade que apareció anteriormente en Kingdom Hearts Union χ y que tendrá un papel importante en la trama.
+                                </p>
+                            </div>
+                            <div class="imagen">
+                                <img src="imagenes/strelitzia.png" alt="Strelitzia KH4">
+                            </div>
+                        </div>
+                        <div class="mickey">
+                            <strong><i>Sora</i></strong>
+                            <div class="label">
+                                <p>
+                                    Se ha confirmado que Mickey será un personaje jugable en una sección limitada del juego, posiblemente ambientada en Scala ad Caelum.
+                                </p>
+                            </div>
+                            <div class="imagen">
+                                <img src="imagenes/mickey.png" alt="Rey Mickey KH4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="teaser" id="teaser">
+                    <h3>Teaser</h3>
+                    <iframe src="https://www.youtube.com/embed/lvTA95QRKxE" title="Kingdom Hearts 4 - Reveal Trailer"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
 
         </div>
@@ -184,4 +265,5 @@
         </div>
     </footer>
 </body>
+
 </html>

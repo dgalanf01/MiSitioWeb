@@ -10,6 +10,7 @@
     <script src="JS/login.js" defer></script> <!-- inicio de sesión -->
     <script src="JS/ocultar.js" defer></script> <!-- Función para ocultar listas del sidebar-->
     <script src="JS/menus.js" defer></script> <!-- menú responsive -->
+    <script src="JS/admin.js" defer></script> <!-- Funciones para admin -->
 </head>
 <body>
     <header>
@@ -83,6 +84,7 @@
     <main>
         <button id="menu-sidebar" aria-label="Abrir menú">☰</button>
         <div id="navegacion">
+
             <div id="listas">
                 <ul>
                     <li class="lista1">
@@ -94,15 +96,17 @@
                             <li class="lista2"><a href="juegos.html#kh2">KH 2</a></li>
                             <li class="lista2"><a href="juegos.html#khddd">KH DdD</a></li>
                             <li class="lista2"><a href="juegos.html#kh3">KH 3</a></li>
-                            <li class="lista2"><p class="a">KH 4</p>
+                            <li class="lista2">
+                                <p class="a">KH 4</p>
                                 <ul type="square">
-                                    <li class="lista3"><a href="juegos.html#kh3info">Informaci&oacute;n</a></li>
-                                    <li class="lista3"><a href="juegos.html#kh3tea">Teaser</a></li>
+                                    <li class="lista3"><a href="kh4.html#info">Informaci&oacute;n</a></li>
+                                    <li class="lista3"><a href="kh4.html#teaser">Teaser</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li class="lista1" ><h3>Mundos</h3>
+                    <li class="lista1">
+                        <h3>Mundos</h3>
                         <ul>
                             <li class="lista2"><a href="mundos.html?mundo=traverse">Ciudad de Paso</a></li>
                             <li class="lista2"><a href="mundos.html?mundo=maravilla">País de las maravillas</a></li>
@@ -113,11 +117,31 @@
                         </ul>
                     </li>
                     <li class="lista1">
-                        <a href="llaves.html"><h3>Llaves</h3></a>
+                        <a href="llaves.html">
+                            <h3>Llaves</h3>
+                        </a>
                     </li>
-                    <li class="lista1"><h3>Jefes</a></h3>
+                    <li class="lista1">
+                        <h3>Jefes</a></h3>
                         <ul>
-                            <li class="lista2"><a href="kh.html">Vanitas</a></li>
+                            <li class="lista2"><a href="jefes.html#eraqus">Armadura Eraqus</a></li>
+                            <li class="lista2"><a href="jefes.html#kurtzisa">Kurt Zisa</a></li>
+                            <li class="lista2"><a href="jefes.html#consciencia">Consciencia Latente</a></li>
+                            <li class="lista2"><a href="jefes.html#monstruo">Monstruo</a></li>
+                            <li class="lista2"><a href="jefes.html#desconocido">Desconocido</a></li>
+                            <li class="lista2"><a href="jefes.html#noheart">No Heart</a></li>
+                            <li class="lista2"><a href="jefes.html#enjendro">Enjendro Oscuro</a></li>
+                            <li class="lista2"><a href="jefes.html#espectro">Espectro</a></li>
+                            <li class="lista2"><a href="jefes.html#polvoroso">Polvoroso</a></li>
+                            <li class="lista2"><a href="jefes.html#aqua">Proyección Aqua</a></li>
+                            <li class="lista2"><a href="jefes.html#sefirot">Sefirot</a></li>
+                            <li class="lista2"><a href="jefes.html#vanitas">Vanitas</a></li>
+                            <li class="lista2"><a href="jefes.html#roxas">Roxas Digital</a></li>
+                            <li class="lista2"><a href="jefes.html#hielo">Titán de Hielo</a></li>
+                            <li class="lista2"><a href="jefes.html#infierno">Infierno Oscuro</a></li>
+                            <li class="lista2"><a href="jefes.html#xemnas">Xemnas</a></li>
+                            <li class="lista2"><a href="jefes.html#julius">Julius</a></li>
+                            <li class="lista2"><a href="jefes.html#yozora">Yozora</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -129,23 +153,31 @@
             <h2>Sugerencias</h2>
 
             <div id="izquierdo">
-                <form>
-                    <label for="juego">Cu&aacute;l fue el &uacute;ltimo que jugaste?</label>
-                    <input type="text" name="juego" id="juego" required placeholder="Kingdom hearts 3"><br>
-                    <label for="sugerencias">Sugerencias: </label>
-                    <textarea name="sugerencias" id="sugerencias" cols="30" rows="10"></textarea><br>
-                    <input type="submit" name="enviar" id="enviar" value="Enviar">
-                    <input type="reset" name="borrar" id="borrar" value="Borrar">
-                </form>
+                <div class="formulario">
+                    <form action="PHP/insertar_sugerencia.php" method="POST">
+                        <label for="juego">Cu&aacute;l fue el &uacute;ltimo que jugaste?</label>
+                        <input type="text" name="juego" id="juego" required placeholder="Kingdom hearts 3"><br>
+                        <label for="sugerencias">Sugerencias: </label>
+                        <textarea name="sugerencias" id="sugerencias" cols="30" rows="10"></textarea><br>
+                        <input type="submit" name="enviar" id="enviar" value="Enviar">
+                        <input type="reset" name="borrar" id="borrar" value="Borrar">
+                    </form>
+                </div>
+                <div id="listadoSugerencias" style="display:none;">
+                    <ul id="listaSugerencias"></ul>
+                </div>
             </div>
         </div>
+
     </main>
     <footer>
         <div id="redes">
             <h3>Redes sociales...</h3>
-            <a href="https://www.facebook.com/"><img src="imagenes/logof.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/"><img src="imagenes/logoi.png" alt="Instagram"></a>
-            <a href="https://www.twitter.com/"><img src="imagenes/logox.png" alt="Twitter"></a>
+            <div class="enlaces">
+                <a href="https://www.facebook.com/"><img src="imagenes/logof.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/"><img src="imagenes/logoi.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com/"><img src="imagenes/logox.png" alt="Twitter"></a>
+            </div>
         </div>
     </footer>
 </body>

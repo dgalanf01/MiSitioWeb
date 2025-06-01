@@ -32,15 +32,15 @@
                     <!-- Aquí se inyectarán los botones o el logout dinámicamente -->
                 </div>
             </div>
-            
+
             <!-- Modal Iniciar sesión -->
             <div id="modalLogin" class="modal">
                 <div class="modal-content">
                     <span class="close">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#75FBFD">
                             <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg>
                     </span>
                     <form id="loginForm" action="PHP/login.php" method="POST">
@@ -54,30 +54,30 @@
                     </form>
                 </div>
             </div>
-                
+
             <!-- Modal Registro -->
             <div id="modalRegistro" class="modal">
                 <div class="modal-content">
                     <span class="close"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#75FBFD">
-                        <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></span>
+                            width="24px" fill="#75FBFD">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></span>
                     <form id="registroForm" action="PHP/registro.php" method="POST">
                         <h2>Registrarse</h2>
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email" placeholder="Email" required>
                         <label for="nuevoUsuario">Usuario:</label>
                         <input type="text" name="nuevoUsuario" id="nuevoUsuario" placeholder="Nuevo usuario" required
-                        autocomplete="off">
+                            autocomplete="off">
                         <label for="nuevaContrasena">Contraseña:</label>
                         <input type="password" name="nuevaContrasena" id="nuevaContrasena" placeholder="Contraseña"
-                        required>
+                            required>
                         <button type="submit">Registrarse</button>
                     </form>
                 </div>
             </div>
-                
+
         </div>
         <button id="menu-toggle" aria-label="Abrir menú">☰</button>
     </header>
@@ -100,8 +100,8 @@
                             <li class="lista2">
                                 <p class="a">KH 4</p>
                                 <ul type="square">
-                                    <li class="lista3"><a href="juegos.html#kh3info">Informaci&oacute;n</a></li>
-                                    <li class="lista3"><a href="juegos.html#kh3tea">Teaser</a></li>
+                                    <li class="lista3"><a href="kh4.html#info">Informaci&oacute;n</a></li>
+                                    <li class="lista3"><a href="kh4.html#teaser">Teaser</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -118,12 +118,31 @@
                         </ul>
                     </li>
                     <li class="lista1">
-                        <a href="llaves.html"><h3>Llaves</h3></a>
+                        <a href="llaves.html">
+                            <h3>Llaves</h3>
+                        </a>
                     </li>
                     <li class="lista1">
                         <h3>Jefes</a></h3>
                         <ul>
-                            <li class="lista2"><a href="kh.html">Vanitas</a></li>
+                            <li class="lista2"><a href="jefes.html#eraqus">Armadura Eraqus</a></li>
+                            <li class="lista2"><a href="jefes.html#kurtzisa">Kurt Zisa</a></li>
+                            <li class="lista2"><a href="jefes.html#consciencia">Consciencia Latente</a></li>
+                            <li class="lista2"><a href="jefes.html#monstruo">Monstruo</a></li>
+                            <li class="lista2"><a href="jefes.html#desconocido">Desconocido</a></li>
+                            <li class="lista2"><a href="jefes.html#noheart">No Heart</a></li>
+                            <li class="lista2"><a href="jefes.html#enjendro">Enjendro Oscuro</a></li>
+                            <li class="lista2"><a href="jefes.html#espectro">Espectro</a></li>
+                            <li class="lista2"><a href="jefes.html#polvoroso">Polvoroso</a></li>
+                            <li class="lista2"><a href="jefes.html#aqua">Proyección Aqua</a></li>
+                            <li class="lista2"><a href="jefes.html#sefirot">Sefirot</a></li>
+                            <li class="lista2"><a href="jefes.html#vanitas">Vanitas</a></li>
+                            <li class="lista2"><a href="jefes.html#roxas">Roxas Digital</a></li>
+                            <li class="lista2"><a href="jefes.html#hielo">Titán de Hielo</a></li>
+                            <li class="lista2"><a href="jefes.html#infierno">Infierno Oscuro</a></li>
+                            <li class="lista2"><a href="jefes.html#xemnas">Xemnas</a></li>
+                            <li class="lista2"><a href="jefes.html#julius">Julius</a></li>
+                            <li class="lista2"><a href="jefes.html#yozora">Yozora</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -135,152 +154,128 @@
             <h2>Juegos</h2>
 
             <div id="izquierdo">
-                <div class="bbs">
-                    <p class="label">
-                        <strong id="bbs">Birth by Sleep:</strong> Tres aprendices de la Llave Espada, Terra, Aqua y
-                        Ventus,
-                        entrenan
-                        bajo la tutela del Maestro Eraqus para convertirse en Maestros de la Llave Espada. Sin embargo,
-                        un
-                        día, un maestro de la llave espada, el Maestro Xehanort, desaparece misteriosamente y al mismo
-                        tiempo, una especie de feroces criaturas conocidos como Nescientes comienzan a extenderse por
-                        todos
-                        los mundos.
-                    </p>
-                    <p class="label">
-                        Terra es enviado a derrotar a los Nescientes y localizar al Maestro Xehanort. Ventus es
-                        incitado a seguir a Terra por el misterioso aprendiz del Maestro Xehanort, Vanitas, y Aqua
-                        recibe
-                        instrucciones del Maestros Eraqus de ir a buscar a Ventus y traerlo de vuelta a casa. En el
-                        camino,
-                        Terra lentamente comienza a perder el control sobre su oscuridad en el interior de su corazón,
-                        pero
-                        encuentra apoyo en el Maestro Xehanort, que parece entenderlo.
-                    </p>
+                <div class="jefes" id="bbs">
+                    <div class="label">
+                        <strong>Birth by Sleep:</strong>
+                        <p>
+                            Historia principal:
+                            El juego sigue las aventuras de tres protagonistas:
+                            Terra: un joven guerrero fuerte pero tentado por la oscuridad.
+                            Ventus: un chico alegre con una conexión misteriosa con Sora.
+                            Aqua: la más madura, defensora de la luz y sus amigos.
+                            Los tres son aprendices de maestro de la Llave Espada entrenados por Maestro
+                            Eraqus, que los envía a investigar unas misteriosas criaturas llamadas Nescientes. También deben buscar al maestro perdido Xehanort, quien tiene un plan secreto
+                            para abrir Kingdom Hearts y obtener el poder definitivo.
+                        </p>
+                        <p>
+                            Elementos importantes:
+                            La historia revela el origen de personajes como Xehanort, Ventus, Vanitas (una parte oscura
+                            de Ventus) y Aqua.
+                            Explica por qué Sora, Riku y Kairi se convierten en elegidos de la Keyblade.
+                            Desarrolla el concepto de Kingdom Hearts, la batalla entre luz y oscuridad, y las verdaderas
+                            intenciones de Xehanort
+                        </p>
+                        <p>
+                            Final:
+                            Sin hacer muchos spoilers, cada protagonista vive su historia, que culmina en una batalla
+                            final que deja consecuencias trágicas:
+                            Terra pierde el control sobre su cuerpo, ocupado por Xehanort.
+                            Aqua se sacrifica para salvar a Terra y queda atrapada en el Reino de la Oscuridad.
+                            Ventus queda en estado de sueño profundo, protegido en el Castillo del Olvido.
+                            Estas historias enlazan directamente con Kingdom Hearts 1 y los eventos futuros.</p>
+                    </div>
+                    <div class="imagen">
+                        <iframe src="https://www.youtube.com/embed/xiWsBHPsaWM"
+                            title="【HD 1080p】True HD Kingdom Hearts Birth By Sleep Teaser" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="kh1">
-                    <p class="label">
-                        <strong id="kh1">Kingdom Hearts I:</strong> Diez años después, la historia cambia de enfoque y
-                        se centra
-                        en Sora y sus amigos Riku y Kairi.
-                        El primer juego muestra como Sora se separa de sus amigos cuando su mundo, las Islas del
-                        Destino, es invadido por criaturas conocidas como los Sincorazón. Durante la invasión, Sora
-                        obtiene la Llave Espada, ya que el corazón de Ventus todavía reside en su interior.
-                    </p>
-                    <p class="label">
-                        Poco después de que aparecer en Ciudad de Paso, Sora se une al Pato Donald y Goofy, dos
-                        emisarios del
-                        Castillo Disney que andan en busca de la "llave" por instrucciones de Mickey, su Rey. El trío
-                        viaja por diferentes mundos basados en películas Disney, sellando las cerraduras de los
-                        corazones de los mundos para evitar las invasiones de más Sincorazón.
-                    </p>
+                <div class="jefes" id="kh1">
+                    <div class="label">
+                        <strong>Kingdom Hearts I:</strong>
+                        <p>
+                            La historia sigue a Sora, un chico de Islas del Destino, cuya vida cambia cuando una tormenta mágica destruye su mundo y lo separa de sus amigos Riku y Kairi. Durante la destrucción, Sora obtiene la Keyblade, una arma mística capaz de luchar contra los Sincorazón, criaturas nacidas de la oscuridad.
+                        </p>
+                        <p>
+                            Sora viaja por distintos mundos de Disney acompañado por Donald y Goofy, enviados por el Rey Mickey. Juntos, intentan frenar a los Sincorazón, salvar a los mundos invadidos por la oscuridad y reencontrarse con Riku y Kairi. En su viaje, Sora descubre que Riku ha sido seducido por la oscuridad y que el verdadero villano es Ansem, quien desea abrir Kingdom Hearts para obtener un poder ilimitado.
+                        </p>
+                        <p>
+                            Al final, Sora, Riku y Mickey logran cerrar la puerta a Kingdom Hearts desde ambos lados para impedir que la oscuridad lo consuma todo. Aunque los mundos son salvados, Sora queda separado de Kairi y Riku, dejando abierta la puerta a futuras aventuras.
+                        </p>
+                    </div>
+                    <div class="imagen">
+                        <iframe src="https://www.youtube.com/embed/CzgrMWisdU0" title="Kingdom Hearts - TRAILER ( PS2 )" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="khcom">
-                    <p class="label">
-                        <strong id="khcom">Kingdom Hearts Chains of Memories:</strong> Después de sellar la puerta a
-                        Kingdom
-                        Hearts, Sora, Donald y Goofy comienzan la búsqueda de Riku
-                        y el Rey Mickey, encontrándose por su camino una fortaleza misteriosa llamada el Castillo del
-                        Olvido. Al entrar, comienzan a perder sus recuerdos.Los tres se encuentran con un grupo de
-                        villanos con capuchas negras (Marluxia, Larxene, Axel y Vexen), quienes forman parte de una
-                        misteriosa organización.
-                    </p>
-                    <p class="label">
-                        En el castillo, Sora descubre que sus recuerdos han sido manipulados
-                        por una chica llamada Naminé que había sido raptada por la Organización. Sora, Donald y Goofy
-                        siguen su camino a través de Castillo del Olvido y, finalmente, encuentran y destruyen a
-                        Marluxia, el señor del castillo, liberando así a Naminé.
-                    </p>
+                <div class="jefes" id="khcom">
+                    <div class="label">
+                        <strong>Kingdom Hearts Chains of Memories:</strong>
+                        <p>
+                            es una entrega intermedia lanzada para Game Boy Advance y luego en versión mejorada para PS2. La historia sigue a Sora, quien junto a Donald y Goofy, continúa su viaje en busca de Riku y Mickey. Al final de Kingdom Hearts, encuentran un misterioso castillo llamado Castillo del Olvido.
+                        </p>
+                        <p>
+                            Dentro del castillo, Sora pierde sus recuerdos poco a poco y los reemplaza con recuerdos creados por Naminé, una joven con el poder de alterar la memoria. Mientras avanza por los pisos del castillo, Sora se enfrenta a miembros de la misteriosa Organización XIII, un grupo que busca manipularlo.
+                        </p>
+                        <p>
+                            En paralelo, Riku también despierta en el castillo, luchando contra su oscuridad interna y enfrentándose a sus propios enemigos. Al final, Sora elige sacrificar los recuerdos alterados y permitir que Naminé restaure su memoria original, aunque esto lo sumerge en un profundo sueño hasta que sus recuerdos sean reparados.
+                        </p>
+                    </div>
+                    <div class="imagen">
+                        <iframe src="https://www.youtube.com/embed/iAk3hqFwYJw" title="Kingdom Hearts Re: Chain of Memories - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="kh2">
-                    <p class="label">
-                        <strong id="kh2">Kingdom Hearts II:</strong> Sora, Donald y Goofy despiertan en Villa
-                        Crepúsculo, sin recordar lo sucedido en el Castillo del
-                        Olvido, y reanudan su búsqueda de Riku y el Rey Mickey. Yen Sid les habla sobre los Incorpóreos
-                        y sus líderes, la Organización XIII (Xemnas, Xigbar, Xaldin, Saïx, Luxord y Demyx). Después,
-                        Maléfica es resucitada y se une a Pete, otro villano de Disney, para encontrar una nueva base de
-                        operaciones antes de reanudar su búsqueda del poder y vengarse de Sora.
-                    </p>
-                    <p class="label">
-                        Sora de nuevo viaja a muchos mundos con temática Disney y resuelve los problemas causados no
-                        sólo por Maléfica y Pete, si no también por la Organización XIII, cuyos miembros se refieren a
-                        él como Roxas.
-                    </p>
-                    <p class="label">
-                        Mientras tanto, Kairi es secuestrada por la Organización. Sora y compañía se
-                        reúnen con el Rey Mickey en Bastión Hueco, quien les revela que el "Ansem" que Sora derrotó en
-                        su primer viaje era en realidad el Sincorazón de Xehanort, quien era alumno de el verdadero
-                        Ansem, Ansem el Sabio, traicionó a su maestro y le robó su nombre, y desde entonces, Ansem el
-                        Sabio ha estado desaparecido. Además, les cuenta que Xemnas, el líder de la Organización, es el
-                        Incorpóreo de Xehanort.
-                    </p>
+                <div class="jefes" id="kh2">
+                    <div class="label">
+                        <strong>Kingdom Hearts II:</strong>
+                        <p>
+                            continúa la historia de Sora, quien despierta tras un largo sueño causado por la restauración de sus recuerdos en Chain of Memories. Acompañado nuevamente por Donald y Goofy, Sora retoma su búsqueda para encontrar a su amigo Riku y detener a la Organización XIII, un grupo de Nobodies que buscan crear Kingdom Hearts para obtener poder.
+                        </p>
+                        <p>
+                            Durante su viaje, Sora visita varios mundos Disney, enfrentándose a nuevos enemigos y resolviendo conflictos. Aprende más sobre la naturaleza de la oscuridad, la luz y la conexión entre los corazones. Riku también aparece, habiendo superado su oscuridad interior y ayudando a Sora en su misión.
+                        </p>
+                        <p>
+                            Al final, Sora y sus amigos enfrentan a Xemnas, líder de la Organización XIII, en una batalla decisiva para salvar a los mundos de la destrucción. Con la victoria, Sora y Riku regresan a las Islas del Destino, esperando reunirse algún día con Kairi.
+                        </p>
+                    </div>
+                    <div class="imagen">
+                        <iframe src="https://www.youtube.com/embed/zCa8w6mrDJg" title="KINGDOM HEARTS II, English trailer - E3 2004" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="khddd">
-                    <p class="label">
-                        <strong id="khddd">Kingdom Hearts 3D: Dream Drop Distance:</strong> (anteriormente conocido como
-                        Kingdom Hearts 3D) es un juego de la saga Kingdom Hearts lanzado en la portátil Nintendo 3DS.
-                        Fue lanzado el 29 de marzo de 2012 en Japón.
-                    </p>
+                <div class="jefes" id="khddd">
+                    <div class="label">
+                        <strong>Kingdom Hearts 3D: Dream Drop Distance:</strong> 
+                        <p>
+                            (Anteriormente conocido como Kingdom Hearts 3D) sigue a Sora y Riku mientras realizan el examen para convertirse en maestros de la Keyblade. Para aprobar, deben entrar a varios mundos en un estado llamado “Sueño Profundo” para despertar a los mundos dormidos y enfrentar amenazas que surgen durante el sueño.
+                        </p>
 
-                    <p class="label">
-                        En Vergel Radiante, Braig se adentra en el área informática del estudio de Ansem el Sabio y se
-                        encuentra a Even y Ienzo inconscientes en el suelo con unas manchas de oscuridad que emanan de
-                        ellos. El único que está consciente en la sala es Terra-Xehanort, al cual Braig hace unas
-                        preguntas. Terra-Xehanort responde invocando la Llave Espada del Maestro Xehanort y se la clava
-                        a Braig al pecho, extrayendo su corazón. Cuando Braig pierde la conciencia, Terra-Xehanort
-                        declara que ahora es "Ansem".
-                    </p>
-                    <p class="label">
-                        Once años después, Yen Sid pone a Sora y Riku a prueba mediante el Examen del Título de Maestro
-                        con el fin de que se conviertan en Maestros de la Llave Espada hechos y derechos y contrarrestar
-                        así el próximo regreso del Maestro Xehanort. Como parte de esta prueba, los dos son enviados a
-                        siete mundos que fueron restaurados tras la derrota de Ansem, el Buscador de la Oscuridad, pero
-                        que entraron en un estado de "sueño profundo" que los desconecta de los otros mundos. Estos
-                        mundos se ven afectados por Oníridos (Dream Eaters), las criaturas que nacen de la oscuridad que
-                        buscan Cerraduras de los Mundos Dormidos. La tarea dada a Sora y Riku es volver a despertar
-                        dichos mundos mediante las Cerraduras Dormidas que se encuentran allí y luego volver al Reino de
-                        la Luz, después de lo cual se considerarán Maestros de la Llave Espada
-                    </p>
-                    <p class="label">
-                        Los dos viajan a través de los Mundos Dormidos de forma independiente el uno del otro después de
-                        haber sido separados al comienzo del examen, y reclutan benevolentes Oníridos Lucientes para
-                        ayudarlos en la búsqueda de las Cerraduras y la lucha contra los malvados Oníridos Terrores que
-                        tratan de destruir los Mundos Dormidos.
-                    </p>
+                        <p>
+                            Durante la misión, ambos enfrentan desafíos personales, recuerdos del pasado y a enemigos nuevos, incluyendo a miembros de la Organización XIII y a un misterioso villano llamado Xehanort, cuyo plan maestro se va revelando..
+                        </p>
+                        <p>
+                            El juego establece la conexión entre los eventos anteriores y prepara el terreno para Kingdom Hearts III, al mostrar la llegada de una nueva guerra entre la luz y la oscuridad, y el regreso de viejos enemigos.
+                        </p>
+                    </div>
+                    <div class="imagen">
+                        <iframe src="https://www.youtube.com/embed/v6nqHBopIis" title="Kingdom Hearts 3D Trailer - Dream Drop Distance - E3 2012" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="kh3">
-                    <p class="label">
-                        <strong id="kh3">Kingdom Hearts III:</strong> La historia comienza justo donde la dejaba KH 0.2,
-                        con Sora, Donald y Goofy viajando a Coliseo del Olimpo para recuperar la fuerza de Sora tras los
-                        sucesos de Dream Drop Distance. Para preparar el asalto final Riku y Mickey viajan al Mundo de
-                        la Oscuridad para rescatar a Aqua mientras Lea y Kairi entran sus habilidades para ser Maestros
-                        de Llave Espada.
-                    </p>
-                    <p class="label">
-                        En el mundo de Caja de Juguetes los personajes de Toy Story confunden a Sora con Yozora, el
-                        personaje protagonista de un videojuego que recuerda al cancelado Final Fantasy Versus XIII.
-                        Ambientado en lo que parece una versión alternativa de Tokyo, Verum Rex aparece prominentemente
-                        en anuncios por todo el mundo.
-                    </p>
-                    <p class="label">
-                        A medida que los héroes avanzan por los mundos de Disney y Pixar se van encontrando con los
-                        diferentes receptáculos de Xehanort, pero todos ellos retrasan los inevitables encuentros. Uno
-                        de los miembros de la Organización, Vexen, se termina destapando como un agente doble para Ansem
-                        el Sabio, ayudando a crear receptáculos para los héroes que habían desaparecido a lo largo de
-                        los años.
-                    </p>
-                    <p class="label">
-                        Xehanort logra corromper a Aqua, pero Sora recupera la Llave Espada de Eraqus para viajar al
-                        Mundo de la Oscuridad y rescatarla. Juntos restauran Tierra de Partida y se enfrentan a Vanitas
-                        para rescatar a Ventus, cuyo corazón seguía dormido dentro de Sora.
-                    </p>
-                    <p class="label">
-                        El enfrentamiento final en Necrópolis de las Llaves Espada se salda con la derrota de los
-                        héroes, asaltados por una marea de Sincorazón. Sora viaja al Mundo Final, donde conoce a
-                        Chirithy (al que vimos en Kingdom Hearts χ) y a una misteriosa mujer de la que solo alcanza a
-                        manifestarse la voz. No todo está acabado: Kairi logra guiarle de vuelta al mundo de la luz,
-                        poco antes de la derrota, cambiando el resultado del encuentro.
-                    </p>
+                <div class="jefes" id="kh3">
+                    <div class="label">
+                        <strong>Kingdom Hearts III:</strong>
+                        <p>
+                            Kingdom Hearts III es la culminación de la saga principal, donde Sora, Donald y Goofy se embarcan en una misión final para detener a Xehanort y su plan de desencadenar la Guerra de las Llaves Espada, que amenaza con destruir el equilibrio entre la luz y la oscuridad.
+                        </p>
+                        <p>
+                            Sora busca reunir a sus amigos dispersos y encontrar la manera de proteger los mundos, viajando a nuevos y conocidos mundos de Disney y Pixar, enfrentándose a miembros de la Organización XIII y otros enemigos. Durante su viaje, descubre más sobre la naturaleza del corazón, la amistad y el sacrificio.
+                        </p>
+                        <p class="label">
+                            La batalla final enfrenta a Sora contra Xehanort en una lucha decisiva para salvar todos los mundos y restaurar la paz. Al final, Sora desaparece misteriosamente, dejando a sus amigos con la esperanza de reencontrarse algún día.
+                        </p>
+                    </div>
+                    <div class="imagen">
+                        <iframe src="https://www.youtube.com/embed/IaTjCvUZjck" title="KINGDOM HEARTS III E3 2015 Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -290,9 +285,11 @@
     <footer>
         <div id="redes">
             <h3>Redes sociales...</h3>
-            <a href="https://www.facebook.com/"><img src="imagenes/logof.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/"><img src="imagenes/logoi.png" alt="Instagram"></a>
-            <a href="https://www.twitter.com/"><img src="imagenes/logox.png" alt="Twitter"></a>
+            <div class="enlaces">
+                <a href="https://www.facebook.com/"><img src="imagenes/logof.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/"><img src="imagenes/logoi.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com/"><img src="imagenes/logox.png" alt="Twitter"></a>
+            </div>
         </div>
     </footer>
 </body>

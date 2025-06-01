@@ -126,15 +126,16 @@ main{
 } 
 
 #izquierdo{
-    float: left;
-    width: 98.5%;
-    height: 100%;
-    border: 1px solid transparent;
-    border-radius: 12px;
-    input{
-        margin-top: 1%;
-        margin-right: 2%;
-    }
+  display: flex;
+  flex-direction: column;
+  width: 98.5%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  input{
+      margin-top: 1%;
+      margin-right: 2%;
+  }
 }
 textarea{
     resize: none;
@@ -222,4 +223,24 @@ textarea{
 
 .oculto {
     display: none !important;
+}
+
+.sugerencia-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin-top: 10px;
+  padding: 1%;
+  background-color: #ADADAE77;
+  border: 2px solid #525252;
+  border-radius: 12px;
+  button{
+    background-color: transparent;
+    border: none;
+    &:hover{
+      fill: #00c2f3;
+    }
+  }
 }
